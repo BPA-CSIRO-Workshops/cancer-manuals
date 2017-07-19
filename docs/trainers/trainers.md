@@ -65,7 +65,7 @@ Children Medical Research Institute, Kids Cancer Alliance, University of Sydney,
 Bioinformatics Manager<br>
 Monash Bioinformatics Platform, Melbourne <br>
 
-## Bioinformatics Training Development  
+## Bioinformatics Training Platform Development  
 
 ![image](images/Revote.jpg) <br>
 **Mr. Jerico Revote** <br>
