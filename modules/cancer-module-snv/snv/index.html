@@ -854,7 +854,7 @@
 <p>Perform QC measures on BAM files</p>
 </li>
 <li>
-<p>Understand and perform simple variant detection on paired NGS data</p>
+<p>Perform simple variant detection on paired NGS data</p>
 </li>
 <li>
 <p>Add annotation information to raw variant calls</p>
@@ -1539,12 +1539,6 @@ samtools mpileup -L <span class="m">1000</span> -B -q <span class="m">1</span> <
 <strong>-q</strong>: skip alignments with mapQ smaller than 1<br />
 <strong>-g</strong>: generate genotype likelihoods in BCF format</p>
 </blockquote>
-<p>Notes on <code class="codehilite">bcftools</code> arguments:</p>
-<blockquote>
-<p><strong>-v</strong>: output potential variant sites only<br />
-<strong>-c</strong>: SNP calling (force –e : likelihood based analyses)<br />
-<strong>-g</strong>: call genotypes at variant sites  </p>
-</blockquote>
 <p><br>
   <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -1606,22 +1600,22 @@ samtools mpileup -L <span class="m">1000</span> -B -q <span class="m">1</span> <
 13
 14
 15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  cp <span class="cp">${</span><span class="n">STRELKA_HOME</span><span class="cp">}</span>/etc/strelka_config_bwa_default.ini .
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cp <span class="cp">${</span><span class="n">STRELKA_HOME</span><span class="cp">}</span>/etc/strelka_config_bwa_default.ini .
 
-  sed &#39;s/isSkipDepthFilters =.*/isSkipDepthFilters = 1/g&#39; -i strelka_config_bwa_default.ini
+sed &#39;s/isSkipDepthFilters =.*/isSkipDepthFilters = 1/g&#39; -i strelka_config_bwa_default.ini
 
-  <span class="cp">${</span><span class="n">STRELKA_HOME</span><span class="cp">}</span>/bin/configureStrelkaWorkflow.pl \
-    --normal=alignment/normal/normal.sorted.dup.recal.bam \
-    --tumor=alignment/tumour/tumour.sorted.dup.recal.bam \
-    --ref=<span class="cp">${</span><span class="n">REF</span><span class="cp">}</span>/human_g1k_v37.fasta \
-    --config=<span class="cp">${</span><span class="n">SNV_BASE</span><span class="cp">}</span>/strelka_config_bwa_default.ini \
-    --output-dir=variant_calling/strelka/
+<span class="cp">${</span><span class="n">STRELKA_HOME</span><span class="cp">}</span>/bin/configureStrelkaWorkflow.pl \
+  --normal=alignment/normal/normal.sorted.dup.recal.bam \
+  --tumor=alignment/tumour/tumour.sorted.dup.recal.bam \
+  --ref=<span class="cp">${</span><span class="n">REF</span><span class="cp">}</span>/human_g1k_v37.fasta \
+  --config=<span class="cp">${</span><span class="n">SNV_BASE</span><span class="cp">}</span>/strelka_config_bwa_default.ini \
+  --output-dir=variant_calling/strelka/
 
-  cd variant_calling/strelka/
-  make -j2
-  cd ../..
+cd variant_calling/strelka/
+make -j2
+cd ../..
 
-  cp variant_calling/strelka/results/passed.somatic.snvs.vcf variant_calling/strelka.vcf
+cp variant_calling/strelka/results/passed.somatic.snvs.vcf variant_calling/strelka.vcf
 </pre></div>
 </td></tr></table>
 
