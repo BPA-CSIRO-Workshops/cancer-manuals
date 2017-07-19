@@ -41,12 +41,12 @@ The Australian National University, Canberra  -->
 Bioinformatics Analyst<br>
 Centre for Crop Disease Management, Curtin University, Perth<br>-->
 
-[image](images/Patch.jpg) <br>
+![image](images/Patch.jpg) <br>
 **Dr. Ann-Marie Patch** <br>
 Senior Research Officer<br>
  Medical Genomics QIMR Berghofer Medical Research Institute, Brisbane  <br>
 
-[image](images/Philip.jpg) <br>
+![image](images/Philip.jpg) <br>
 **Dr. Gayle Philip** <br>
 Research Fellow (Bioinformatics)<br>
 Melbourne Bioinformatics, Carlton, Melbourne  <br>
@@ -55,12 +55,12 @@ Melbourne Bioinformatics, Carlton, Melbourne  <br>
 
 <!--[image](images/generic.jpg) **Dr Anna Syme** Bioinformatician, Melbourne Bioinformatics, Melbourne  -->
 
-[image](images/Teber.png) <br>
+![image](images/Teber.png) <br>
 **Dr. Erdahl Teber** <br>
 Senior Research Officer (Bioinformatics)<br>
 Children Medical Research Institute, Kids Cancer Alliance, University of Sydney, Sydney  <br>
 
-[image](images/Tyagi.jpg) <br>
+![image](images/Tyagi.jpg) <br>
 **Dr. Sonika Tyagi** <br>
 Bioinformatics Manager<br>
 Monash Bioinformatics Platform, Melbourne <br>
