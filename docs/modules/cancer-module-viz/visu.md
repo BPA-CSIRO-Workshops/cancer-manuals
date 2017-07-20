@@ -73,9 +73,9 @@ This data has *not* been restricted to a short piece of a chromosome and SNVs
 have already been filtered:
 
   ```
-  less mutect.somatic.tsv
+  less mutect.somatic.vcf
   less delly.somatic.vcf
-  less data/scones.somatic.30k.tsv
+  less scones.somatic.tsv
   ```
 <br>
 
@@ -129,14 +129,15 @@ Let’s import the variants:
 
   ```R
   snp=read.table("mutect.somatic.vcf")
-  sv=read.table("somatic.sv.vcf")
-  cnv=read.table("data/scones.somatic.tsv",header=T)
+  sv=read.table("delly.somatic.vcf")
+  cnv=read.table("scones.somatic.tsv",header=T)
   ```
 
 <br>
 We need to set up the generic graphical parameters:
 
   ```R
+  x11()
   par(mar = c(1, 1, 1, 1))
   circos.par("start.degree" = 90)
   circos.par("track.height" = 0.05)
@@ -151,15 +152,13 @@ Let’s draw hg19 reference ideograms:
   ```
 
 <br>
-Unfortunately circlize does not support hg38 yet. So we will need to
-reformat our data to fit the hg19 standards. As we are working only on autosomes,
-we won’t need to lift-over and we could simply add *chr* at the beginning
-of the chromosome names.
+We need to ensure our data to fits the hg19 standards so the main thing to
+check is that we have `chr` at the beginning of the chromosome names.
 
 We can now draw 1 track for somatic mutations:
 
   ```R
-  snv_tmp=read.table("data/mutec.somatic.vcf",comment.char="#")
+  snv_tmp=read.table("mutect.somatic.vcf",comment.char="#")
   snv=cbind(paste("chr",as.character(snp[,1]),sep=""),snp[2],snp[,2]+1)
   circos.genomicTrackPlotRegion(snv,stack=TRUE, panel.fun = function(region, value, ...) {
       circos.genomicPoints(region, value, cex = 0.05, pch = 9,col='orange' , ...)
@@ -243,18 +242,13 @@ You should obtain a plot like this one:
 ![image](images/circos.png)
 
 <br>
-!!! note "Question"
-    Could you generate the graph and save it into a pdf file?
+Now save the image to the visualization directory as a .pdf:
 
-    !!! success ""
-        ??? "**Answer**"
-            ```R
-            circos.clear()
-            pdf("circos.pdf")
-            ...
-            dev.off()
-            ```
-
+  ```R
+  dev.copy2pdf(file = "/home/trainee/visualization/variant_visualization.pdf")
+  dev.off()
+  ```
+<br>
 Finally exit R
   ```R
   q("yes")
