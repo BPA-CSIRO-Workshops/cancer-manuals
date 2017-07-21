@@ -981,7 +981,7 @@ your terminal.</p>
 <span class="nb">export</span> <span class="nv">JAVA7</span><span class="o">=</span>/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
 <span class="nb">export</span> <span class="nv">IGV</span><span class="o">=</span><span class="nv">$APP_ROOT</span>/igv/igv.sh
 <span class="nb">export</span> <span class="nv">VEP</span><span class="o">=</span><span class="nv">$APP_ROOT</span>/ensembl-tools/scripts/variant_effect_predictor/variant_effect_predictor.pl
-<span class="nb">export</span> <span class="nv">VEP_CACHE</span><span class="o">=</span>/mnt/workshop/data/bgdata/datasets/vepcache/70-20150729/homo_sapiens/
+<span class="nb">export</span> <span class="nv">VEP_CACHE</span><span class="o">=</span>/mnt/workshop/data/bgdata/datasets/vepcache/82
 </pre></div>
 </td></tr></table>
 
@@ -1744,7 +1744,7 @@ normal (<code class="codehilite">Blood</code>) and tumour (<code class="codehili
 <p><br>
 Let’s now run <code class="codehilite">VEP</code> on this VCF file to annotate each variant with its
 impact(s) on the genome.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">perl</span> <span class="nv">$VEP</span> <span class="o">--</span><span class="n">dir_cache</span> <span class="nv">$VEP_CACHE</span> <span class="o">-</span><span class="n">i</span> <span class="n">variants</span><span class="sr">/HC.chr5.60Mb.vcf.gz --vcf -o variants/</span><span class="n">HC</span><span class="o">.</span><span class="n">chr5</span><span class="mf">.60</span><span class="n">Mb</span><span class="o">.</span><span class="n">vep</span><span class="o">.</span><span class="n">vcf</span> <span class="o">--</span><span class="n">stats_file</span> <span class="n">variants</span><span class="sr">/HC.chr5.60Mb.vep.html --format vcf --offline -fork 4 --fasta ref/</span><span class="n">human_g1k_v37</span><span class="o">.</span><span class="n">fasta</span> <span class="o">--</span><span class="n">fields</span> <span class="n">Consequence</span><span class="p">,</span><span class="n">Codons</span><span class="p">,</span><span class="n">Amino_acids</span><span class="p">,</span><span class="n">Gene</span><span class="p">,</span><span class="n">SYMBOL</span><span class="p">,</span><span class="n">Feature</span><span class="p">,</span><span class="n">EXON</span><span class="p">,</span><span class="n">PolyPhen</span><span class="p">,</span><span class="n">SIFT</span><span class="p">,</span><span class="n">Protein_position</span><span class="p">,</span><span class="n">BIOTYPE</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">perl</span> <span class="nv">$VEP</span> <span class="o">--</span><span class="n">dir_cache</span> <span class="nv">$VEP_CACHE</span> <span class="o">-</span><span class="n">i</span> <span class="n">variants</span><span class="sr">/HC.chr5.60Mb.vcf.gz --vcf -o variants/</span><span class="n">HC</span><span class="o">.</span><span class="n">chr5</span><span class="mf">.60</span><span class="n">Mb</span><span class="o">.</span><span class="n">vep</span><span class="o">.</span><span class="n">vcf</span> <span class="o">--</span><span class="n">stats_file</span> <span class="n">variants</span><span class="sr">/HC.chr5.60Mb.vep.html --format vcf --offline -fork 4 --fasta ref/</span><span class="n">human_g1k_v37</span><span class="o">.</span><span class="n">fasta</span> <span class="o">--</span><span class="n">fields</span> <span class="n">Consequence</span><span class="p">,</span><span class="n">Codons</span><span class="p">,</span><span class="n">Amino_acids</span><span class="p">,</span><span class="n">Gene</span><span class="p">,</span><span class="n">SYMBOL</span><span class="p">,</span><span class="n">Feature</span><span class="p">,</span><span class="n">EXON</span><span class="p">,</span><span class="n">PolyPhen</span><span class="p">,</span><span class="n">SIFT</span><span class="p">,</span><span class="n">Protein_position</span><span class="p">,</span><span class="n">BIOTYPE</span> <span class="o">--</span><span class="n">species</span> <span class="n">homo_sapiens</span>
 </pre></div>
 </td></tr></table>
 
@@ -1826,7 +1826,7 @@ external annotations to add more information about your variants (such
 as their frequencies in international databases).</p>
 <p>To get started with <code class="codehilite">GEMINI</code>, let’s make a database out of our annotated
 VCF file.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>gemini load -v variants/HC.chr5.60Mb.vep.vcf --cores 4 --skip-gerp-bp --skip-cadd -t VEP variants/HC.chr5.60Mb.vep.vcf.db
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">gemini</span> <span class="k">load</span> <span class="o">-</span><span class="n">v</span> <span class="n">variants</span><span class="o">/</span><span class="n">HC</span><span class="p">.</span><span class="n">chr5</span><span class="p">.</span><span class="mi">60</span><span class="n">Mb</span><span class="p">.</span><span class="n">vep</span><span class="p">.</span><span class="n">vcf</span> <span class="c1">--cores 4 --skip-gerp-bp --skip-cadd -t VEP variants/HC.chr5.60Mb.vep.vcf.db</span>
 </pre></div>
 </td></tr></table>
 
@@ -1836,7 +1836,7 @@ normalized before creating the <code class="codehilite">GEMINI</code> database b
 scope of this workshop.</p>
 <p>Once the database has been created let’s run a basic query to see what
 kind of information we get out of <code class="codehilite">GEMINI</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">gemini</span> <span class="n">query</span> <span class="o">-</span><span class="n">q</span> <span class="ss">&quot;SELECT *, (gts).(*), (gt_types).(*), (gt_depths).(*), (gt_ref_depths).(*), (gt_alt_depths).(*), (gt_quals).(*) FROM variants LIMIT 10;&quot;</span> <span class="c1">--header variants/HC.chr5.60Mb.vep.vcf.db</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">gemini</span> <span class="n">query</span> <span class="o">-</span><span class="n">q</span> <span class="ss">&quot;SELECT *, (gts).(*), (gt_types).(*), (gt_depths).(*), (gt_ref_depths).(*), (gt_alt_depths).(*), (gt_quals).(*) FROM variants LIMIT 10;&quot;</span> <span class="c1">--header variants/HC.chr5.60Mb.vep.vcf.db</span>
 </pre></div>
 </td></tr></table>
 
@@ -1860,7 +1860,7 @@ database.</p>
 medium or high impact on a gene and are rare or not present in existing
 international allele frequency databases. We will save the output of
 this query to a file and open it up in a spreadsheet.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">gemini</span> <span class="n">query</span> <span class="o">-</span><span class="n">q</span> <span class="ss">&quot;SELECT *, (gts).(*), (gt_types).(*), (gt_depths).(*), (gt_ref_depths).(*), (gt_alt_depths).(*), (gt_quals).(*) FROM variants WHERE (impact_severity = &#39;HIGH&#39; OR impact_severity = &#39;MED&#39;) AND (aaf_1kg_all &lt; 0.01 OR aaf_1kg_all is null) AND (aaf_esp_all &lt; 0.01 OR aaf_esp_all is null) AND (aaf_exac_all &lt; 0.01 OR aaf_exac_all is null);&quot;</span> <span class="c1">--header variants/HC.chr5.60Mb.vep.vcf.db &gt; variants/gemini-result.tsv</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">gemini</span> <span class="n">query</span> <span class="o">-</span><span class="n">q</span> <span class="ss">&quot;SELECT *, (gts).(*), (gt_types).(*), (gt_depths).(*), (gt_ref_depths).(*), (gt_alt_depths).(*), (gt_quals).(*) FROM variants WHERE (impact_severity = &#39;HIGH&#39; OR impact_severity = &#39;MED&#39;) AND (aaf_1kg_all &lt; 0.01 OR aaf_1kg_all is null) AND (aaf_esp_all &lt; 0.01 OR aaf_esp_all is null) AND (aaf_exac_all &lt; 0.01 OR aaf_exac_all is null);&quot;</span> <span class="c1">--header variants/HC.chr5.60Mb.vep.vcf.db &gt; variants/gemini-result.tsv</span>
 </pre></div>
 </td></tr></table>
 
@@ -1875,7 +1875,7 @@ in any of these databases.</p>
 </pre></div>
 </td></tr></table>
 
-<p>Tick the &ldquo;Tab&rdquo; under &ldquo;Separated by&rdquo; on the dialog window that comes up.  </p>
+<p>Tick the <code class="codehilite">Tab</code> under <code class="codehilite">Separated by</code> on the dialog window that comes up.  </p>
 <p>You can see that the first 14 columns contain information on the variant
 including its location, ref, alt, dbSNP ID, quality and type. Slowly
 scroll to the right and look at the columns of data that are provided.
