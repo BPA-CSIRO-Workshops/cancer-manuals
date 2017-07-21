@@ -606,9 +606,9 @@ easy alternative to build a circular representation of genomic data.</p>
 have already been filtered:</p>
 <p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>less mutect.somatic.tsv
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>less mutect.somatic.vcf
 less delly.somatic.vcf
-less data/scones.somatic.30k.tsv
+less scones.somatic.tsv
 </pre></div>
 </td></tr></table>
 <br></p>
@@ -654,8 +654,8 @@ Let’s import the variants:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>snp<span class="o">=</span>read.table<span class="p">(</span><span class="s">&quot;mutect.somatic.vcf&quot;</span><span class="p">)</span>
-sv<span class="o">=</span>read.table<span class="p">(</span><span class="s">&quot;somatic.sv.vcf&quot;</span><span class="p">)</span>
-cnv<span class="o">=</span>read.table<span class="p">(</span><span class="s">&quot;data/scones.somatic.tsv&quot;</span><span class="p">,</span>header<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+sv<span class="o">=</span>read.table<span class="p">(</span><span class="s">&quot;delly.somatic.vcf&quot;</span><span class="p">)</span>
+cnv<span class="o">=</span>read.table<span class="p">(</span><span class="s">&quot;scones.somatic.tsv&quot;</span><span class="p">,</span>header<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -664,7 +664,9 @@ We need to set up the generic graphical parameters:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>par<span class="p">(</span>mar <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">))</span>
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>x11<span class="p">()</span>
+par<span class="p">(</span>mar <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">))</span>
 circos.par<span class="p">(</span><span class="s">&quot;start.degree&quot;</span> <span class="o">=</span> <span class="m">90</span><span class="p">)</span>
 circos.par<span class="p">(</span><span class="s">&quot;track.height&quot;</span> <span class="o">=</span> <span class="m">0.05</span><span class="p">)</span>
 circos.par<span class="p">(</span><span class="s">&quot;canvas.xlim&quot;</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">-1.3</span><span class="p">,</span> <span class="m">1.3</span><span class="p">),</span> <span class="s">&quot;canvas.ylim&quot;</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">-1.3</span><span class="p">,</span> <span class="m">1.3</span><span class="p">))</span>
@@ -678,16 +680,14 @@ Let’s draw hg19 reference ideograms:</p>
 </td></tr></table>
 
 <p><br>
-Unfortunately circlize does not support hg38 yet. So we will need to
-reformat our data to fit the hg19 standards. As we are working only on autosomes,
-we won’t need to lift-over and we could simply add <em>chr</em> at the beginning
-of the chromosome names.</p>
+We need to ensure our data to fits the hg19 standards so the main thing to
+check is that we have <code class="codehilite">chr</code> at the beginning of the chromosome names.</p>
 <p>We can now draw 1 track for somatic mutations:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>snv_tmp<span class="o">=</span>read.table<span class="p">(</span><span class="s">&quot;data/mutec.somatic.vcf&quot;</span><span class="p">,</span>comment.char<span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">)</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>snv_tmp<span class="o">=</span>read.table<span class="p">(</span><span class="s">&quot;mutect.somatic.vcf&quot;</span><span class="p">,</span>comment.char<span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">)</span>
 snv<span class="o">=</span><span class="kp">cbind</span><span class="p">(</span><span class="kp">paste</span><span class="p">(</span><span class="s">&quot;chr&quot;</span><span class="p">,</span><span class="kp">as.character</span><span class="p">(</span>snp<span class="p">[,</span><span class="m">1</span><span class="p">]),</span>sep<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">),</span>snp<span class="p">[</span><span class="m">2</span><span class="p">],</span>snp<span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="m">+1</span><span class="p">)</span>
 circos.genomicTrackPlotRegion<span class="p">(</span>snv<span class="p">,</span>stack<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> panel.fun <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>region<span class="p">,</span> value<span class="p">,</span> <span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
     circos.genomicPoints<span class="p">(</span>region<span class="p">,</span> value<span class="p">,</span> cex <span class="o">=</span> <span class="m">0.05</span><span class="p">,</span> pch <span class="o">=</span> <span class="m">9</span><span class="p">,</span>col<span class="o">=</span><span class="s">&#39;orange&#39;</span> <span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
@@ -797,21 +797,15 @@ legend<span class="p">(</span><span class="m">0.6</span><span class="p">,</span>
 <p><br>
 You should obtain a plot like this one:</p>
 <p><img alt="image" src="../images/circos.png" /></p>
-<div class="admonition note">
-<p class="admonition-title">Question</p>
-<p>Could you generate the graph and save it into a pdf file?</p>
-<div class="admonition success"><details><summary><strong>Answer</strong></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>circos.clear<span class="p">()</span>
-pdf<span class="p">(</span><span class="s">&quot;circos.pdf&quot;</span><span class="p">)</span>
-<span class="kc">...</span>
+<p><br>
+Now save the image to the visualization directory as a .pdf:</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dev.copy2pdf<span class="p">(</span>file <span class="o">=</span> <span class="s">&quot;/home/trainee/visualization/variant_visualization.pdf&quot;</span><span class="p">)</span>
 dev.off<span class="p">()</span>
 </pre></div>
 </td></tr></table>
-</details></div>
-</div>
-<p>Finally exit R
+<br>
+Finally exit R
   <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">q</span><span class="p">(</span><span class="s">&quot;yes&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></p>
