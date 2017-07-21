@@ -1,3 +1,8 @@
+!!! attention "Important"
+    This is an advanced module. 
+    <br>
+
+
 This module was written by Mathieu Bourgey and the original on-line version is available
 [here.](https://github.com/mbourgey/EBI_cancer_workshop_visualization/tree/australia_2015)
 
