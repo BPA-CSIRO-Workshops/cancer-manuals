@@ -127,7 +127,15 @@ To start analyzing the actual data, we have to remove the header.
         ??? "Answer"
                 grep -v "^#" 1000gp.vcf | head  
 
-!!! note "Advanced exercise"
+<br>
+
+!!! attention ""
+    *This is an advanced section.*  
+    <br>
+
+
+
+!!! note "Question"
     How many lines of data are in the file (rather than counting the number
     of header lines and subtracting, try just counting the number of data
     lines)?
