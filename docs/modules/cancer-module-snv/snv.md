@@ -144,7 +144,7 @@ your terminal.
   export JAVA7=/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
   export IGV=$APP_ROOT/igv/igv.sh
   export VEP=$APP_ROOT/ensembl-tools/scripts/variant_effect_predictor/variant_effect_predictor.pl
-  export VEP_CACHE=/mnt/workshop/data/bgdata/datasets/vepcache/70-20150729/homo_sapiens/
+  export VEP_CACHE=/mnt/workshop/data/bgdata/datasets/vepcache/82
   ```
 
 <br>
@@ -886,7 +886,7 @@ Let’s now run `VEP` on this VCF file to annotate each variant with its
 impact(s) on the genome.
 
   ```perl
-  perl $VEP --dir_cache $VEP_CACHE -i variants/HC.chr5.60Mb.vcf.gz --vcf -o variants/HC.chr5.60Mb.vep.vcf --stats_file variants/HC.chr5.60Mb.vep.html --format vcf --offline -fork 4 --fasta ref/human_g1k_v37.fasta --fields Consequence,Codons,Amino_acids,Gene,SYMBOL,Feature,EXON,PolyPhen,SIFT,Protein_position,BIOTYPE
+  perl $VEP --dir_cache $VEP_CACHE -i variants/HC.chr5.60Mb.vcf.gz --vcf -o variants/HC.chr5.60Mb.vep.vcf --stats_file variants/HC.chr5.60Mb.vep.html --format vcf --offline -fork 4 --fasta ref/human_g1k_v37.fasta --fields Consequence,Codons,Amino_acids,Gene,SYMBOL,Feature,EXON,PolyPhen,SIFT,Protein_position,BIOTYPE --species homo_sapiens
   ```
 
 <br>
@@ -972,8 +972,8 @@ as their frequencies in international databases).
 To get started with `GEMINI`, let’s make a database out of our annotated
 VCF file.
 
-  ```
-  gemini load -v variants/HC.chr5.60Mb.vep.vcf --cores 4 --skip-gerp-bp --skip-cadd -t VEP variants/HC.chr5.60Mb.vep.vcf.db
+  ```SQL
+  /usr/local/bin/gemini load -v variants/HC.chr5.60Mb.vep.vcf --cores 4 --skip-gerp-bp --skip-cadd -t VEP variants/HC.chr5.60Mb.vep.vcf.db
   ```
 
 This will take approximately 10 minutes. You will see a few errors due
@@ -985,7 +985,7 @@ Once the database has been created let’s run a basic query to see what
 kind of information we get out of `GEMINI`.
 
   ```SQL
-  gemini query -q "SELECT *, (gts).(*), (gt_types).(*), (gt_depths).(*), (gt_ref_depths).(*), (gt_alt_depths).(*), (gt_quals).(*) FROM variants LIMIT 10;" --header variants/HC.chr5.60Mb.vep.vcf.db
+  /usr/local/bin/gemini query -q "SELECT *, (gts).(*), (gt_types).(*), (gt_depths).(*), (gt_ref_depths).(*), (gt_alt_depths).(*), (gt_quals).(*) FROM variants LIMIT 10;" --header variants/HC.chr5.60Mb.vep.vcf.db
   ```
 
 This will output a bunch of ordered information for your query to the
@@ -1011,7 +1011,7 @@ international allele frequency databases. We will save the output of
 this query to a file and open it up in a spreadsheet.
 
   ```SQL
-  gemini query -q "SELECT *, (gts).(*), (gt_types).(*), (gt_depths).(*), (gt_ref_depths).(*), (gt_alt_depths).(*), (gt_quals).(*) FROM variants WHERE (impact_severity = 'HIGH' OR impact_severity = 'MED') AND (aaf_1kg_all < 0.01 OR aaf_1kg_all is null) AND (aaf_esp_all < 0.01 OR aaf_esp_all is null) AND (aaf_exac_all < 0.01 OR aaf_exac_all is null);" --header variants/HC.chr5.60Mb.vep.vcf.db > variants/gemini-result.tsv
+  /usr/local/bin/gemini query -q "SELECT *, (gts).(*), (gt_types).(*), (gt_depths).(*), (gt_ref_depths).(*), (gt_alt_depths).(*), (gt_quals).(*) FROM variants WHERE (impact_severity = 'HIGH' OR impact_severity = 'MED') AND (aaf_1kg_all < 0.01 OR aaf_1kg_all is null) AND (aaf_esp_all < 0.01 OR aaf_esp_all is null) AND (aaf_exac_all < 0.01 OR aaf_exac_all is null);" --header variants/HC.chr5.60Mb.vep.vcf.db > variants/gemini-result.tsv
   ```
 
 Notice that we have added a WHERE statement which restricts the rows
@@ -1025,7 +1025,7 @@ Now let’s open the result in a spreadsheet to look at the annotations:
 
     libreoffice --calc variants/gemini-result.tsv
 
-Tick the "Tab" under "Separated by" on the dialog window that comes up.  
+Tick the `Tab` under `Separated by` on the dialog window that comes up.  
 
 You can see that the first 14 columns contain information on the variant
 including its location, ref, alt, dbSNP ID, quality and type. Slowly
