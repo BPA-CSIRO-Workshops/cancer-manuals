@@ -63,7 +63,7 @@ Children Medical Research Institute, Kids Cancer Alliance, University of Sydney,
 ![image](images/Tyagi.jpg) <br>
 **Dr. Sonika Tyagi** <br>
 Bioinformatics Manager<br>
-Monash Bioinformatics Platform, Melbourne <br>
+Monash Bioinformatics Platform, Monash University Melbourne <br>
 
 ## Bioinformatics Training Platform Development  
 
