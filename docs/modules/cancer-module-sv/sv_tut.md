@@ -41,7 +41,7 @@ Vcftools:
 https://vcftools.github.io/index.html
 
 Picard:  
-https://github.com/broadinstitute/picard
+https://broadinstitute.github.io/picard/explain-flags.html
 
 Python2.7.10:  
 https://www.python.org/downloads/release/python-2710/
@@ -148,7 +148,7 @@ Description of the arguments used in the command:
 ## DELLY VCF output
 
 A VCF file has multiple header lines starting with the hash `#` sign.
-Below the header lines is one record for each structural variant. The
+There is one record for each unique structural variant. The
 record format is described in the table below:
 
 Column | Field | Description
@@ -165,8 +165,7 @@ Column | Field | Description
 10+ | | Individual genotype information defined by FORMAT
 
 
-You can look at the header of the vcf file using `grep -A 1` includes
-the first structural variant record in the file:
+You can look at the header of the vcf file and the first structural variant record in the file using the below command (-A is the option which prints the specified N lines after the match):
 
     grep "^#" -A 1 del.vcf
 
@@ -197,7 +196,7 @@ imprecise variants you can simply use `grep`.
 <br>
 DELLY clusters abnormal paired-ends and every single cluster gives rise
 to an `IMPRECISE` SV call. For every `IMPRECISE` SV call an attempt is made
-to identify supporting split-reads/soft-clipped reads DELLY then
+to identify supporting split-reads/soft-clipped reads. DELLY then
 computes a consensus sequence (INFO:CONSENSUS) out of all split-read
 candidates and then aligns this consensus sequence to the reference
 requiring at least -m many aligned bases to the left and right (default
