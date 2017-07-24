@@ -709,7 +709,7 @@ participants will:</p>
 <p>Vcftools:<br />
 <a href="https://vcftools.github.io/index.html">https://vcftools.github.io/index.html</a></p>
 <p>Picard:<br />
-<a href="https://github.com/broadinstitute/picard">https://github.com/broadinstitute/picard</a></p>
+<a href="https://broadinstitute.github.io/picard/explain-flags.html">https://broadinstitute.github.io/picard/explain-flags.html</a></p>
 <p>Python2.7.10:<br />
 <a href="https://www.python.org/downloads/release/python-2710/">https://www.python.org/downloads/release/python-2710/</a></p>
 <p>PyVCF Banyan numpy:<br />
@@ -808,7 +808,7 @@ delly -t TRA -x $RF/hg19.excl -o tra.vcf -g $RF/hg19.fa $DS/cancer_cell_line.bam
 <hr />
 <h2 id="delly-vcf-output">DELLY VCF output<a class="headerlink" href="#delly-vcf-output" title="Permanent link">&para;</a></h2>
 <p>A VCF file has multiple header lines starting with the hash <code class="codehilite">#</code> sign.
-Below the header lines is one record for each structural variant. The
+There is one record for each unique structural variant. The
 record format is described in the table below:</p>
 <table>
 <thead>
@@ -871,8 +871,7 @@ record format is described in the table below:</p>
 </tr>
 </tbody>
 </table>
-<p>You can look at the header of the vcf file using <code class="codehilite">grep -A 1</code> includes
-the first structural variant record in the file:</p>
+<p>You can look at the header of the vcf file and the first structural variant record in the file using the below command (-A is the option which prints the specified N lines after the match):</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>grep &quot;^#&quot; -A 1 del.vcf
 </pre></div>
 </td></tr></table>
@@ -903,7 +902,7 @@ grep -c -w <span class="s2">&quot;IMPRECISE&quot;</span> *.vcf
 <p><br>
 DELLY clusters abnormal paired-ends and every single cluster gives rise
 to an <code class="codehilite">IMPRECISE</code> SV call. For every <code class="codehilite">IMPRECISE</code> SV call an attempt is made
-to identify supporting split-reads/soft-clipped reads DELLY then
+to identify supporting split-reads/soft-clipped reads. DELLY then
 computes a consensus sequence (INFO:CONSENSUS) out of all split-read
 candidates and then aligns this consensus sequence to the reference
 requiring at least -m many aligned bases to the left and right (default
