@@ -12,6 +12,8 @@
 * Sonika Tyagi (ST) - Monash University, Melbourne
 
 
+## [Workshop Material](https://www.dropbox.com/home/Cancer%20Genomics%20-%20USYD%202017)
+
 ## Timetable
 ### Day 1
 **25th July** - [Computer Lab 1.4, Charles Perkins Centre, University of Sydney, NSW](https://goo.gl/maps/feoXLjEhke52)
