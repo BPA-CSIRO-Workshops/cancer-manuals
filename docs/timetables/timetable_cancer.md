@@ -22,7 +22,7 @@
 |9:15|Introduction to cancer genomics and NGS techniques – focus on DNA||AMP|
 |10:15|**Break**|
 |10:30|Experimental design (interactive/ice breaker/group activity) and caveats; considerations on processing capacities; 10 ways to ruin your experiment||AMP|
-|11:30|Command line intro (Unix, R) – L(15') / P(30')|[[Practical]](https://bpa-csiro-workshops.github.io/cancer-manuals/modules/cancer-module-cli/commandline/)|GP|
+|11:30|Command line intro (Unix, R) – L(15') / P(30')|[[Practical]](https://bpa-csiro-workshops.github.io/cancer-manuals/modules/cancer-module-cli/commandline/)[[Commands in slides]](https://www.dropbox.com/sh/6lxjlqke6ztcltq/AAAECgboUKQVdtlmA_xVqlyXa/01%20Command%20Line?dl=0&preview=cli_commands_slides.txt)|GP|
 |12:30|**Lunch**|
 |13:30|Raw data - FASTQ format and QC||ST|
 |14:00|Alignment (L)||ST|
