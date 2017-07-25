@@ -352,7 +352,7 @@ means that we can aggregate the average read depth over relatively large
 chunks of the genome and compare these values between the normal and
 tumour genomes.
 
-To begin, we will go to `Tools` then `Run igvtools...` in the IGV
+To begin, select the genome `Human (b37)`, go to `Tools` then `Run igvtools...` in the IGV
 menubar. Specify the normal bam file (under `cnv` then `data`) as the
 input file and change the window size to 100,000 (one hundred thousand).
 Then press the `Run` button and IGV will make the TDF file. This takes
