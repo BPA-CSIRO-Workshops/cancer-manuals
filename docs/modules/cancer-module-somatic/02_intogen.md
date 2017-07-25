@@ -90,8 +90,8 @@ help the identification of driver genes.
 ***
 ## Analysing cancer cohort data with IntOGen
 
-IntOGen-mutations is available as a web based service that can allow 
-users to run their analysis on the host’s servers or it can be downloaded 
+IntOGen-mutations is available as a web based service that can allow
+users to run their analysis on the host’s servers or it can be downloaded
 and run on a local server.
 
 For the purposes of the course we will be using a local version of
@@ -102,18 +102,18 @@ For the purposes of the course we will be using a local version of
     ```bash
     cd ~/somatic/intogen
     ```
-    
-In this directory you will find a Mutation Annotation Format (MAF) file 
+
+In this directory you will find a Mutation Annotation Format (MAF) file
 containing a cut down version of the somatic variant calls identified from
 melanoma samples investigated as part of the TCGA cancer genomics projects.
-You can see what files are in the directory by typing `ls`, look inside the 
+You can see what files are in the directory by typing `ls`, look inside the
 file using `less TCGA_Melanoma_SMgene.maf` and close the file and return to
-the command line by typing `q`. 
+the command line by typing `q`.
 
 - Run the `IntOGen` analysis by typing
 
     ```bash
-    intogen -i TCGA_Melanoma_SMgene.maf -o TCGA_Mela_out
+    intogen -i TCGA_Melanoma_slimSMgene.maf -o TCGA_Mela_out
     ```
 
 The TCGA melanoma maf used in this practical has been modified from the
@@ -143,11 +143,11 @@ the input and `-o` to control the mane of the output directory.
     ```bash
     less ~./intogen/task.conf
     less ~./intogen/system.conf
-	```
+	  ```
 
 It is important to set the correct genome assembly in the `task.conf` to match
 the one that you used as your reference when the variant were called. In our
-`task.conf` this should be `hg19`. 
+`task.conf` this should be `hg19`.
 
 ***
 ## Exploring the output of IntOGen
@@ -155,7 +155,7 @@ the one that you used as your reference when the variant were called. In our
 When you run your data over the web on the remote site there is a browse
 facility that allows you to explore your data using the web version of
 the database. Running `IntOGen` locally provides the same tabular
-information but in a flat file format. 
+information but in a flat file format.
 
 There should be 14 files generated from a successful run of this version of `IntOGen`:
 
@@ -177,25 +177,25 @@ There should be 14 files generated from a successful run of this version of `Int
 
 View these files by using `ls` as below.
 
-    ```bash
-    ls ~/somatic/intogen/TCGA_Mela_out/project/TCGA_Melanoma_slimSMgene/
-    ```
+  ```bash
+  ls ~/somatic/intogen/TCGA_Mela_out/project/TCGA_Melanoma_slimSMgene/
+  ```
 
-This practical will concentrate on the identification of driver genes so 
+This practical will concentrate on the identification of driver genes so
 we will look at the main output concerning genes.
 The `gene.tsv` is the main gene centric output summary table.
 
 - Open up the `gene.tsv` file in `LibreOffice` by double clicking on the icon on your
-desktop. 
+desktop.
 
-- Select the file tab and click on open. 
+- Select the file tab and click on open.
 
-- Navigate to the results directory 
-`~/somatic/intogen/TCGA_Mela_out/project/TCGA_Melanoma_slimSMgene/` 
+- Navigate to the results directory
+`~/somatic/intogen/TCGA_Mela_out/project/TCGA_Melanoma_slimSMgene/`
 
-- Double click on `gene.tsv`. 
+- Double click on `gene.tsv`.
 
-- In the pop-up box under the `Separator options` ensure only the tab box is 
+- In the pop-up box under the `Separator options` ensure only the tab box is
 checked and click `OK`.
 
 This file contains the overall summary results for the `IntOGen` pipeline
@@ -203,23 +203,23 @@ presented by gene and reports Q values (i.e. multiple testing corrected
 P values) for the mutation frequency and cluster modules.
 
 Significantly mutated genes from the cohort data are identified using both
-the `OncodriveFM` and `OncodriveClUST` modules of `IntOGen`. The `OncodriveFM` 
-module detects genes that have accumulated mutations with a high functional 
-impact. It uses annotations from the Ensembl variant effect predictor (VEP, V.70) 
-that includes SIFT and Polyphen2 and precomputed MutationAssessor functional 
+the `OncodriveFM` and `OncodriveClUST` modules of `IntOGen`. The `OncodriveFM`
+module detects genes that have accumulated mutations with a high functional
+impact. It uses annotations from the Ensembl variant effect predictor (VEP, V.70)
+that includes SIFT and Polyphen2 and precomputed MutationAssessor functional
 impacts. It calculates a P value per gene from the number of mutations detected
 across all possible coding bases of a gene with a positive weighting for mutations
-with a high functional impact. The `OncodriveCLUST` module detects genes that 
-have more variants than would be expected across the cohort that alter the 
+with a high functional impact. The `OncodriveCLUST` module detects genes that
+have more variants than would be expected across the cohort that alter the
 same region of the gene.
 
 
 The file is sorted to bring the most significantly altered genes to the top. The key
-columns that help you identify the significantly mutated genes are the 3rd and 4th 
-(C and D) that indicate which of the modules identified a significant result and 
+columns that help you identify the significantly mutated genes are the 3rd and 4th
+(C and D) that indicate which of the modules identified a significant result and
 the Q-values for the modules that are in 21st and 23rd (U and W)
 
-The top twelve genes have significant Q-values for both modules and include BRAF, 
+The top twelve genes have significant Q-values for both modules and include BRAF,
 NRAS and TP53. The next 35 are significant by only one of the modules.
 
 All of these have small Q-values which means they are all
@@ -256,10 +256,10 @@ out by the `OncodriveCLUST` module of `IntOGen` are shown as  amino
 acid residue positions of the encoded protein.
 
 The three known oncogenes BRAF, NRAS and IDH1 have very low CLUST_QVALUEs
-indicating that the mutations in these genes are highly clustered. The 
-`CLUST_COORDS` column reports that there are 160 samples with mutations 
+indicating that the mutations in these genes are highly clustered. The
+`CLUST_COORDS` column reports that there are 160 samples with mutations
 between the amino acid positions 594-601 of BRAF; 84 samples with mutations
-at amino acid position 61 of NRAS; and 15 sample with mutations at amino 
+at amino acid position 61 of NRAS; and 15 sample with mutations at amino
 acid position 132 of IDH1.
 
 !!! note "Question"
@@ -278,8 +278,8 @@ acid position 132 of IDH1.
 <br>
 The other files in the output support the information in this sheet.
 
-The ` sample_variant+transcript.impact` file includes a summary of all mutations 
-found in each of the genes and protein coding transcripts of those genes for all 
+The ` sample_variant+transcript.impact` file includes a summary of all mutations
+found in each of the genes and protein coding transcripts of those genes for all
 samples identified that have that mutation. It also reports the variant impact scores
 from SIFT, PolyPhen2, MutationAssesor, reporting also impact categories of which
 there are four; high, medium, low and none.
