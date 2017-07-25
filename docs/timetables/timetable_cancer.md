@@ -12,7 +12,8 @@
 * Sonika Tyagi (ST) - Monash University, Melbourne
 
 
-## [Workshop Material](https://www.dropbox.com/home/Cancer%20Genomics%20-%20USYD%202017)
+## Workshop Material
+Material for the workshop can be found [here](https://www.dropbox.com/sh/6lxjlqke6ztcltq/AABGoqMuxdraPWnkUuMdu19za?dl=0).
 
 ## Timetable
 ### Day 1
