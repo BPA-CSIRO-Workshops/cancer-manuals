@@ -658,8 +658,8 @@ indicators of positive selection that occurs in cancer evolution and may
 help the identification of driver genes.</p>
 <hr />
 <h2 id="analysing-cancer-cohort-data-with-intogen">Analysing cancer cohort data with IntOGen<a class="headerlink" href="#analysing-cancer-cohort-data-with-intogen" title="Permanent link">&para;</a></h2>
-<p>IntOGen-mutations is available as a web based service that can allow 
-users to run their analysis on the host’s servers or it can be downloaded 
+<p>IntOGen-mutations is available as a web based service that can allow
+users to run their analysis on the host’s servers or it can be downloaded
 and run on a local server.</p>
 <p>For the purposes of the course we will be using a local version of
 <code class="codehilite">IntOGen</code> so that we don’t encounter any issues sharing resources.</p>
@@ -672,16 +672,16 @@ and run on a local server.</p>
 
 </li>
 </ul>
-<p>In this directory you will find a Mutation Annotation Format (MAF) file 
+<p>In this directory you will find a Mutation Annotation Format (MAF) file
 containing a cut down version of the somatic variant calls identified from
 melanoma samples investigated as part of the TCGA cancer genomics projects.
-You can see what files are in the directory by typing <code class="codehilite">ls</code>, look inside the 
+You can see what files are in the directory by typing <code class="codehilite">ls</code>, look inside the
 file using <code class="codehilite">less TCGA_Melanoma_SMgene.maf</code> and close the file and return to
-the command line by typing <code class="codehilite">q</code>. </p>
+the command line by typing <code class="codehilite">q</code>.</p>
 <ul>
 <li>
 <p>Run the <code class="codehilite">IntOGen</code> analysis by typing</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>intogen -i TCGA_Melanoma_SMgene.maf -o TCGA_Mela_out
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>intogen -i TCGA_Melanoma_slimSMgene.maf -o TCGA_Mela_out
 </pre></div>
 </td></tr></table>
 
@@ -711,23 +711,18 @@ the input and <code class="codehilite">-o</code> to control the mane of the outp
 <ul>
 <li>
 <p>To look at the default options open up the configuration file by typing</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>less ~./intogen/task.conf
-less ~./intogen/system.conf
-</pre></div>
-</td></tr></table>
-
+<p><code class="codehilite">bashless ~./intogen/task.confless ~./intogen/system.conf</code></p>
 </li>
 </ul>
 <p>It is important to set the correct genome assembly in the <code class="codehilite">task.conf</code> to match
 the one that you used as your reference when the variant were called. In our
-<code class="codehilite">task.conf</code> this should be <code class="codehilite">hg19</code>. </p>
+<code class="codehilite">task.conf</code> this should be <code class="codehilite">hg19</code>.</p>
 <hr />
 <h2 id="exploring-the-output-of-intogen">Exploring the output of IntOGen<a class="headerlink" href="#exploring-the-output-of-intogen" title="Permanent link">&para;</a></h2>
 <p>When you run your data over the web on the remote site there is a browse
 facility that allows you to explore your data using the web version of
 the database. Running <code class="codehilite">IntOGen</code> locally provides the same tabular
-information but in a flat file format. </p>
+information but in a flat file format.</p>
 <p>There should be 14 files generated from a successful run of this version of <code class="codehilite">IntOGen</code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -760,34 +755,30 @@ pathway.oncodrivefm
 </td></tr></table>
 
 <p>View these files by using <code class="codehilite">ls</code> as below.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>```bash
-ls ~/somatic/intogen/TCGA_Mela_out/project/TCGA_Melanoma_slimSMgene/
-```
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ls ~/somatic/intogen/TCGA_Mela_out/project/TCGA_Melanoma_slimSMgene/
 </pre></div>
 </td></tr></table>
 
-<p>This practical will concentrate on the identification of driver genes so 
+<p>This practical will concentrate on the identification of driver genes so
 we will look at the main output concerning genes.
 The <code class="codehilite">gene.tsv</code> is the main gene centric output summary table.</p>
 <ul>
 <li>
 <p>Open up the <code class="codehilite">gene.tsv</code> file in <code class="codehilite">LibreOffice</code> by double clicking on the icon on your
-desktop. </p>
+desktop.</p>
 </li>
 <li>
-<p>Select the file tab and click on open. </p>
+<p>Select the file tab and click on open.</p>
 </li>
 <li>
-<p>Navigate to the results directory 
-<code class="codehilite">~/somatic/intogen/TCGA_Mela_out/project/TCGA_Melanoma_slimSMgene/</code> </p>
+<p>Navigate to the results directory
+<code class="codehilite">~/somatic/intogen/TCGA_Mela_out/project/TCGA_Melanoma_slimSMgene/</code></p>
 </li>
 <li>
-<p>Double click on <code class="codehilite">gene.tsv</code>. </p>
+<p>Double click on <code class="codehilite">gene.tsv</code>.</p>
 </li>
 <li>
-<p>In the pop-up box under the <code class="codehilite">Separator options</code> ensure only the tab box is 
+<p>In the pop-up box under the <code class="codehilite">Separator options</code> ensure only the tab box is
 checked and click <code class="codehilite">OK</code>.</p>
 </li>
 </ul>
@@ -795,20 +786,20 @@ checked and click <code class="codehilite">OK</code>.</p>
 presented by gene and reports Q values (i.e. multiple testing corrected
 P values) for the mutation frequency and cluster modules.</p>
 <p>Significantly mutated genes from the cohort data are identified using both
-the <code class="codehilite">OncodriveFM</code> and <code class="codehilite">OncodriveClUST</code> modules of <code class="codehilite">IntOGen</code>. The <code class="codehilite">OncodriveFM</code> 
-module detects genes that have accumulated mutations with a high functional 
-impact. It uses annotations from the Ensembl variant effect predictor (VEP, V.70) 
-that includes SIFT and Polyphen2 and precomputed MutationAssessor functional 
+the <code class="codehilite">OncodriveFM</code> and <code class="codehilite">OncodriveClUST</code> modules of <code class="codehilite">IntOGen</code>. The <code class="codehilite">OncodriveFM</code>
+module detects genes that have accumulated mutations with a high functional
+impact. It uses annotations from the Ensembl variant effect predictor (VEP, V.70)
+that includes SIFT and Polyphen2 and precomputed MutationAssessor functional
 impacts. It calculates a P value per gene from the number of mutations detected
 across all possible coding bases of a gene with a positive weighting for mutations
-with a high functional impact. The <code class="codehilite">OncodriveCLUST</code> module detects genes that 
-have more variants than would be expected across the cohort that alter the 
+with a high functional impact. The <code class="codehilite">OncodriveCLUST</code> module detects genes that
+have more variants than would be expected across the cohort that alter the
 same region of the gene.</p>
 <p>The file is sorted to bring the most significantly altered genes to the top. The key
-columns that help you identify the significantly mutated genes are the 3<sup>rd</sup> and 4<sup>th</sup> 
-(C and D) that indicate which of the modules identified a significant result and 
+columns that help you identify the significantly mutated genes are the 3<sup>rd</sup> and 4<sup>th</sup>
+(C and D) that indicate which of the modules identified a significant result and
 the Q-values for the modules that are in 21<sup>st</sup> and 23<sup>rd</sup> (U and W)</p>
-<p>The top twelve genes have significant Q-values for both modules and include BRAF, 
+<p>The top twelve genes have significant Q-values for both modules and include BRAF,
 NRAS and TP53. The next 35 are significant by only one of the modules.</p>
 <p>All of these have small Q-values which means they are all
 significantly mutated genes in this TCGA Melanoma cohort of 338
@@ -834,10 +825,10 @@ has the lowest Q-value for OncodriveCLUST.</p><p>c)  The P value calculation tak
 out by the <code class="codehilite">OncodriveCLUST</code> module of <code class="codehilite">IntOGen</code> are shown as  amino
 acid residue positions of the encoded protein.</p>
 <p>The three known oncogenes BRAF, NRAS and IDH1 have very low CLUST_QVALUEs
-indicating that the mutations in these genes are highly clustered. The 
-<code class="codehilite">CLUST_COORDS</code> column reports that there are 160 samples with mutations 
+indicating that the mutations in these genes are highly clustered. The
+<code class="codehilite">CLUST_COORDS</code> column reports that there are 160 samples with mutations
 between the amino acid positions 594-601 of BRAF; 84 samples with mutations
-at amino acid position 61 of NRAS; and 15 sample with mutations at amino 
+at amino acid position 61 of NRAS; and 15 sample with mutations at amino
 acid position 132 of IDH1.</p>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
@@ -852,8 +843,8 @@ result.</p></details></div>
 </div>
 <p><br>
 The other files in the output support the information in this sheet.</p>
-<p>The <code class="codehilite">sample_variant+transcript.impact</code> file includes a summary of all mutations 
-found in each of the genes and protein coding transcripts of those genes for all 
+<p>The <code class="codehilite">sample_variant+transcript.impact</code> file includes a summary of all mutations
+found in each of the genes and protein coding transcripts of those genes for all
 samples identified that have that mutation. It also reports the variant impact scores
 from SIFT, PolyPhen2, MutationAssesor, reporting also impact categories of which
 there are four; high, medium, low and none.</p>
