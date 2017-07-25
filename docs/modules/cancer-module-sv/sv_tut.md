@@ -248,7 +248,7 @@ For large VCF files you should also zip and index them using `bgzip` and
 `tabix`. Please run the below commands to meet the requirements for
 visualising somatic structural variants using `IGV`.
 
-    bgzip somatic.sv.vcf
+    bgzip -c somatic.sv.vcf > somatic.sv.vcf.gz
     tabix somatic.sv.vcf.gz
 
 ***
@@ -268,18 +268,16 @@ see the breakpoints we will create a bed file.
 <br>
 Load the IGV browser
 
-    $BR/igv.sh
+    $BR/igv.sh &
 
 <br>
 Once IGV has started use `File` and `Load from File` to load the
-`cancer_cell_line.bam`. To dedicate more of the screen to read pile ups,
-right click on the left hand box that contains the
-`cancer_cell_line.bam Junctions` then select `Remove Track`. Go to
-`View` menu and select `Preferences`, then click on the Alignments tab
+`cancer_cell_line.bam` and the `control.bam`.  
+Go to `View` menu and select `Preferences`, then click on the Alignments tab
 and in the `Visibility range threshold (kb)` text box, enter 600. This
 will allow you to increase your visibility of pile ups as you zoom out.
-Now look for check box for `Filter secondary alignments` click on to
-ensure we do not see secondary alignments (alternate mapped position of
+Now look for check box for `Filter secondary alignments`.
+Ensure box is ticked so that you do not see secondary alignments (alternate mapped position of
 a read). Also ensure that `Show soft-clipped bases` has been checked
 then click `OK`.
 
@@ -295,7 +293,7 @@ The somatic structural variants can then be browsed easily using the
 `Region Navigator`. Select the deletion (chrX:76853017-77014863) from
 the `Region Navigator` and click `View`. This will centre the IGV
 alignment view on the selected structural variant. Close the regions of
-interest pop up window. The red bar below the ruler marks the region of
+interest pop up window by right clicking mouse at the top of pop up and then choose close. The red bar below the ruler marks the region of
 the deletion.
 
 It’s usually best to zoom out once by clicking on the `-` sign in the
@@ -316,14 +314,18 @@ alignments by` then select `start location`.
     How many abnormal *paired-end read pairs* (red coloured F/R oriented
     read pairs) can you see that spans the deletion region? Does this number
     coincide with the INFO:PE?
-
+    !!! hint ""
+        ??? "Hint"
+            ```
+            cat somatic.sv.vcf | grep "<DEL>" | cut -f 8
+            ```
     !!! success ""
         ??? "**Answer**"
             19, YES
 
 !!! note "Question"
-    Zoom into left breakpoint and tally the number of soft-clipped reads at
-    both junctions. How many abnormal split-reads (soft-clipped reads) did
+    Zoom into left and right breakpoint separately and tally the number of soft-clipped reads (count the soft-clipped reads with >24 mismatched reads).
+    How many abnormal split-reads (soft-clipped reads) did
     you observe? Clue INFO:SR.
 
     !!! success ""
@@ -354,11 +356,8 @@ alignments by` then select `start location`.
 !!! attention ""
     *This is an advanced section.*
 
-- Select the duplication (chrX:45649874-45689322) from the `Region Navigator`.
-
-- Highlight the abnormal paired-ends by clicking and selecting `Color alignments by`
-and then switch to `insert size and pair orientation`.
-Also, invoke `Sort alignments by` then select `start location`.
+- Select the translocation breakpoint chr18 from the Region Navigator. Highlight the abnormal paired-ends by clicking and selecting
+`Color alignments by` and then switch to `insert size and pair orientation`. Invoke `Sort alignments by` then select `start location`. 
 
 - Zoom out until you can see all the purple reads at the junction.
 
@@ -415,7 +414,7 @@ Also, invoke `Sort alignments by` then select `start location`.
 
     !!! success ""
         ??? "**Answer**"
-            PARD6G on Chr15 and ADAMTSL3 on Chr18.
+            ADAMTSL3 on Chr15 and PARD6G on Chr18.
 
 !!! note "Question"
     What is one possible reason why there is no observable read coverage
