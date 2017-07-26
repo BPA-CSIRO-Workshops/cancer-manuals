@@ -709,7 +709,7 @@ participants will:</p>
 <p>Vcftools:<br />
 <a href="https://vcftools.github.io/index.html">https://vcftools.github.io/index.html</a></p>
 <p>Picard:<br />
-<a href="https://broadinstitute.github.io/picard/explain-flags.html">https://broadinstitute.github.io/picard/explain-flags.html</a></p>
+<a href="https://broadinstitute.github.io/picard/">https://broadinstitute.github.io/picard/</a></p>
 <p>Python2.7.10:<br />
 <a href="https://www.python.org/downloads/release/python-2710/">https://www.python.org/downloads/release/python-2710/</a></p>
 <p>PyVCF Banyan numpy:<br />
@@ -718,7 +718,7 @@ participants will:</p>
 <p>SAM Specification:<br />
 <a href="http://samtools.sourceforge.net/SAM1.pdf">http://samtools.sourceforge.net/SAM1.pdf</a></p>
 <p>Explain SAM Flags:<br />
-<a href="http://picard.sourceforge.net/explain-flags.html">http://picard.sourceforge.net/explain-flags.html</a></p>
+<a href="https://broadinstitute.github.io/picard/explain-flags.html">https://broadinstitute.github.io/picard/explain-flags.html</a></p>
 <hr />
 <h2 id="author-information">Author Information<a class="headerlink" href="#author-information" title="Permanent link">&para;</a></h2>
 <p><em>Primary Author(s):</em>  <br />
@@ -962,12 +962,8 @@ tabix somatic.sv.vcf.gz
 <hr />
 <h2 id="visualisation-of-somatic-structural-variants">Visualisation of Somatic Structural Variants<a class="headerlink" href="#visualisation-of-somatic-structural-variants" title="Permanent link">&para;</a></h2>
 <p>The final step will be to browse some of these somatic structural
-variants in IGV and to visually verify the reliability of the calls. VCF
-file structure was designed by the 1000Genomes Project consortium with
-considerable focus being placed on single-nucleotide variants and
-InDels. It is arguable whether the file format is easy to interpret for
-basic SVs and much less for complex SV formatting. To make it easier to
-see the breakpoints we will create a bed file.</p>
+variants in IGV and to visually verify the reliability of the calls. To make it easy
+to navigate through our breakpoints of interest we will create a bed file (0-index co-ordinate format file).  </p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$CZ/sv.vcf2bed.sh somatic.sv.vcf.gz &gt; somatic.sv.bed
 head somatic.sv.bed
@@ -981,9 +977,9 @@ Load the IGV browser</p>
 </td></tr></table>
 
 <p><br>
-Once IGV has started use <code class="codehilite">File</code> and <code class="codehilite">Load from File</code> to load the
-<code class="codehilite">cancer_cell_line.bam</code> and the <code class="codehilite">control.bam</code>.<br />
-Go to <code class="codehilite">View</code> menu and select <code class="codehilite">Preferences</code>, then click on the Alignments tab
+Once IGV has started use <code class="codehilite">File</code> and <code class="codehilite">Load from File</code> (directory /home/trainee/sv/data) to load the
+<code class="codehilite">cancer_cell_line.bam</code> and the <code class="codehilite">control.bam</code>. Go to <code class="codehilite">View</code> menu and
+select <code class="codehilite">Preferences</code>, then click on the Alignments tab
 and in the <code class="codehilite">Visibility range threshold (kb)</code> text box, enter 600. This
 will allow you to increase your visibility of pile ups as you zoom out.
 Now look for check box for <code class="codehilite">Filter secondary alignments</code>.
@@ -1013,7 +1009,8 @@ highlighted in red. Click <code class="codehilite">View as pairs</code>. Right c
 <p><br></p>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
-<div class="admonition hint"><details><summary>Hint</summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cat somatic.sv.vcf | grep &quot;&lt;DEL&gt;&quot; | cut -f 8
+<p>How many abnormal <em>paired-end read pairs</em> (red coloured F/R oriented read pairs) can you see that spans the deletion region? Does this number coincide with the INFO:PE?</p>
+<div class="admonition hint"><details><summary>Hint</summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cat somatic.sv.vcf | grep &quot;&lt;DEL&gt;&quot; | cut -f1,2,8
 </pre></div>
 </td></tr></table>
 </details></div>
@@ -1046,8 +1043,11 @@ the control genome.</p></details></div>
 </div>
 <ul>
 <li>
+<p>Remove <code class="codehilite">control.bam</code> and the coverage track by right clicking on the track panel and selecting remove track.</p>
+</li>
+<li>
 <p>Select the translocation breakpoint chr18 from the Region Navigator. Highlight the abnormal paired-ends by clicking and selecting
-<code class="codehilite">Color alignments by</code> and then switch to <code class="codehilite">insert size and pair orientation</code>. Invoke <code class="codehilite">Sort alignments by</code> then select <code class="codehilite">start location</code>. </p>
+<code class="codehilite">Color alignments by</code> and then switch to <code class="codehilite">insert size and pair orientation</code>. Invoke <code class="codehilite">Sort alignments by</code> then select <code class="codehilite">start location</code>.</p>
 </li>
 <li>
 <p>Zoom out until you can see all the purple reads at the junction.</p>
@@ -1065,8 +1065,10 @@ Chr18?</p>
 <p class="admonition-title">Question</p>
 <p>Right click on to one of the purple coloured reads and select <code class="codehilite">View mate region in split-screen</code>.
 This will split the screen and display Chr15 on the left and place a red
-highlighted outline on both reads, to indicate the pairs. Right click and
-<code class="codehilite">Sort alignments by</code> then select <code class="codehilite">start location</code>.</p>
+highlighted outline on both reads, to indicate the pairs. Select <code class="codehilite">view as pairs</code>,
+then sort alignments by start location. To control the zooming on each of the chromosome panels,
+first click inside of the track panel of your chromosome of interest, then to zoom in
+(<code class="codehilite">Shift</code> and <code class="codehilite">+</code> key together) or out (press <code class="codehilite">Ctrl</code> and <code class="codehilite">-</code> key together).</p>
 <p>What is the direction of the yellow cluster of reads (indicates that mate
 reads are mapped to Chr18)? Is it pointing to the tail or head of Chr15?
 If you wish to zoom in or out, first click inside of the chromosome ideogram
@@ -1077,7 +1079,11 @@ panel, then ctrl- to zoom out and shift+ to zoom in.</p>
 <p class="admonition-title">Question</p>
 <p>How is the Chr15 and Chr18 fused (which one of the four translocation
 connection types)? If you are uncertain then run a BLAT (<a href="https://genome.ucsc.edu/cgi-bin/hgBlat?command=start">https://genome.ucsc.edu/cgi-bin/hgBlat?command=start</a>)
-search using the INFO:CONSENSUS sequence (gedit <code class="codehilite">somatic.sv.vcf</code>).</p>
+search using the INFO:CONSENSUS sequence.</p>
+<div class="admonition hint"><details><summary>Hint</summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cat somatic.sv.vcf | grep &quot;&lt;TRA&gt;&quot; | cut -f1,2,8
+</pre></div>
+</td></tr></table>
+</details></div>
 <div class="admonition success"><details><summary><strong>Answer</strong></summary><p>RF, head to tail, or 5 to 3. Therefore, Chr18 left side is fused to
 Chr15 right side.</p></details></div>
 </div>
@@ -1128,6 +1134,10 @@ or RR)?</p>
 <p class="admonition-title">Question</p>
 <p>What is the estimated read-depth ratio of the cancer_cell_line versus
 normal control (INFO:RDRATIO) over the duplicate region?</p>
+<div class="admonition hint"><details><summary>Hint</summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cat somatic.sv.vcf | grep &quot;&lt;DUP&gt;&quot; | cut -f1,2,8
+</pre></div>
+</td></tr></table>
+</details></div>
 <div class="admonition success"><details><summary><strong>Answer</strong></summary><p>3.3 ( 3 x increased read depth)</p></details></div>
 </div>
 <h3 id="verify-inversion">Verify Inversion<a class="headerlink" href="#verify-inversion" title="Permanent link">&para;</a></h3>
