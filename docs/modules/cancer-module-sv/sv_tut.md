@@ -41,7 +41,7 @@ Vcftools:
 https://vcftools.github.io/index.html
 
 Picard:  
-https://broadinstitute.github.io/picard/explain-flags.html
+https://broadinstitute.github.io/picard/
 
 Python2.7.10:  
 https://www.python.org/downloads/release/python-2710/
@@ -55,7 +55,7 @@ SAM Specification:
 http://samtools.sourceforge.net/SAM1.pdf
 
 Explain SAM Flags:  
-http://picard.sourceforge.net/explain-flags.html
+https://broadinstitute.github.io/picard/explain-flags.html
 
 ***
 ## Author Information
@@ -255,12 +255,8 @@ visualising somatic structural variants using `IGV`.
 ## Visualisation of Somatic Structural Variants
 
 The final step will be to browse some of these somatic structural
-variants in IGV and to visually verify the reliability of the calls. VCF
-file structure was designed by the 1000Genomes Project consortium with
-considerable focus being placed on single-nucleotide variants and
-InDels. It is arguable whether the file format is easy to interpret for
-basic SVs and much less for complex SV formatting. To make it easier to
-see the breakpoints we will create a bed file.
+variants in IGV and to visually verify the reliability of the calls. To make it easy
+to navigate through our breakpoints of interest we will create a bed file (0-index co-ordinate format file).  
 
     $CZ/sv.vcf2bed.sh somatic.sv.vcf.gz > somatic.sv.bed
     head somatic.sv.bed
@@ -271,9 +267,9 @@ Load the IGV browser
     $BR/igv.sh &
 
 <br>
-Once IGV has started use `File` and `Load from File` to load the
-`cancer_cell_line.bam` and the `control.bam`.  
-Go to `View` menu and select `Preferences`, then click on the Alignments tab
+Once IGV has started use `File` and `Load from File` (directory /home/trainee/sv/data) to load the
+`cancer_cell_line.bam` and the `control.bam`. Go to `View` menu and
+select `Preferences`, then click on the Alignments tab
 and in the `Visibility range threshold (kb)` text box, enter 600. This
 will allow you to increase your visibility of pile ups as you zoom out.
 Now look for check box for `Filter secondary alignments`.
@@ -311,13 +307,12 @@ alignments by` then select `start location`.
 <br>
 
 !!! note "Question"
-    How many abnormal *paired-end read pairs* (red coloured F/R oriented
-    read pairs) can you see that spans the deletion region? Does this number
-    coincide with the INFO:PE?
+    How many abnormal *paired-end read pairs* (red coloured F/R oriented read pairs) can you see that spans the deletion region? Does this number coincide with the INFO:PE?
+
     !!! hint ""
         ??? "Hint"
             ```
-            cat somatic.sv.vcf | grep "<DEL>" | cut -f 8
+            cat somatic.sv.vcf | grep "<DEL>" | cut -f1,2,8
             ```
     !!! success ""
         ??? "**Answer**"
@@ -356,8 +351,10 @@ alignments by` then select `start location`.
 !!! attention ""
     *This is an advanced section.*
 
+- Remove `control.bam` and the coverage track by right clicking on the track panel and selecting remove track.
+
 - Select the translocation breakpoint chr18 from the Region Navigator. Highlight the abnormal paired-ends by clicking and selecting
-`Color alignments by` and then switch to `insert size and pair orientation`. Invoke `Sort alignments by` then select `start location`. 
+`Color alignments by` and then switch to `insert size and pair orientation`. Invoke `Sort alignments by` then select `start location`.
 
 - Zoom out until you can see all the purple reads at the junction.
 
@@ -376,8 +373,10 @@ alignments by` then select `start location`.
 !!! note "Question"
     Right click on to one of the purple coloured reads and select `View mate region in split-screen`.
     This will split the screen and display Chr15 on the left and place a red
-    highlighted outline on both reads, to indicate the pairs. Right click and
-    `Sort alignments by` then select `start location`.
+    highlighted outline on both reads, to indicate the pairs. Select `view as pairs`,
+    then sort alignments by start location. To control the zooming on each of the chromosome panels,
+    first click inside of the track panel of your chromosome of interest, then to zoom in
+    (`Shift` and `+` key together) or out (press `Ctrl` and `-` key together).
 
     What is the direction of the yellow cluster of reads (indicates that mate
     reads are mapped to Chr18)? Is it pointing to the tail or head of Chr15?
@@ -392,7 +391,13 @@ alignments by` then select `start location`.
 !!! note "Question"
     How is the Chr15 and Chr18 fused (which one of the four translocation
     connection types)? If you are uncertain then run a BLAT (https://genome.ucsc.edu/cgi-bin/hgBlat?command=start)
-    search using the INFO:CONSENSUS sequence (gedit `somatic.sv.vcf`).
+    search using the INFO:CONSENSUS sequence.
+
+    !!! hint ""
+        ??? "Hint"
+            ```
+            cat somatic.sv.vcf | grep "<TRA>" | cut -f1,2,8
+            ```
 
     !!! success ""
         ??? "**Answer**"
@@ -453,6 +458,12 @@ left junction and then right junction.
 !!! note "Question"
     What is the estimated read-depth ratio of the cancer_cell_line versus
     normal control (INFO:RDRATIO) over the duplicate region?
+
+    !!! hint ""
+        ??? "Hint"
+            ```
+            cat somatic.sv.vcf | grep "<DUP>" | cut -f1,2,8
+            ```
 
     !!! success ""
         ??? "**Answer**"
