@@ -129,21 +129,22 @@ run `IntOGen`.
 
 - To get a list of `IntOGen` options open up a new terminal
 
-    ```bash
-    intogen --help
-    ```   
+  ```bash
+  intogen --help
+  ```   
 
 This command will list the running options that you can alter as command line
 inputs or in a configuration file. We are using the default options for this run
 so we didn't have to supply a configuration file and we only used `-i` to set
 the input and `-o` to control the mane of the output directory.
 
-- To look at the default options open up the configuration file by typing
+- To look at the default options open up the configuration file by typing  
 
-    ```bash
-    less ~./intogen/task.conf
-    less ~./intogen/system.conf
-	  ```
+```bash
+less ~./intogen/task.conf  
+less ~./intogen/system.conf
+```
+
 
 It is important to set the correct genome assembly in the `task.conf` to match
 the one that you used as your reference when the variant were called. In our
@@ -177,7 +178,7 @@ There should be 14 files generated from a successful run of this version of `Int
 
 View these files by using `ls` as below.
 
-  ```bash
+  ```bash  
   ls ~/somatic/intogen/TCGA_Mela_out/project/TCGA_Melanoma_slimSMgene/
   ```
 
