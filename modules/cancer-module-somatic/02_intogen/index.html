@@ -16,7 +16,7 @@
       
         <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.5">
     
     
       
@@ -97,11 +97,11 @@
         
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
-<div class="md-search" data-md-component="search">
+<div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
@@ -696,24 +696,25 @@ the output can be explored.</p>
 <p>Whilst the tool is running we can explore the options we have used to
 run <code class="codehilite">IntOGen</code>.</p>
 <ul>
-<li>
-<p>To get a list of <code class="codehilite">IntOGen</code> options open up a new terminal</p>
+<li>To get a list of <code class="codehilite">IntOGen</code> options open up a new terminal</li>
+</ul>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>intogen --help
 </pre></div>
 </td></tr></table>
 
-</li>
-</ul>
 <p>This command will list the running options that you can alter as command line
 inputs or in a configuration file. We are using the default options for this run
 so we didn&rsquo;t have to supply a configuration file and we only used <code class="codehilite">-i</code> to set
 the input and <code class="codehilite">-o</code> to control the mane of the output directory.</p>
 <ul>
-<li>
-<p>To look at the default options open up the configuration file by typing</p>
-<p><code class="codehilite">bashless ~./intogen/task.confless ~./intogen/system.conf</code></p>
-</li>
+<li>To look at the default options open up the configuration file by typing  </li>
 </ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>less ~./intogen/task.conf  
+less ~./intogen/system.conf
+</pre></div>
+</td></tr></table>
+
 <p>It is important to set the correct genome assembly in the <code class="codehilite">task.conf</code> to match
 the one that you used as your reference when the variant were called. In our
 <code class="codehilite">task.conf</code> this should be <code class="codehilite">hg19</code>.</p>
@@ -937,7 +938,7 @@ Sort the data by GENE, then TRANSCRIPT and then PROTEIN_POS to make this easier.
       
     </div>
     
-      <script src="../../../assets/javascripts/application-c35428f87f.js"></script>
+      <script src="../../../assets/javascripts/application-07b0fbb49b.js"></script>
       
       
       <script>app.initialize({url:{base:"../../.."}})</script>
