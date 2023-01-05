@@ -1,22 +1,25 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
         <meta name="description" content="This contains all material for the Cancer Genomics workshop.">
-      
       
       
         <meta name="author" content="Authors">
       
       
-        <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.5">
+        <link rel="prev" href="../01_signatures/">
+      
+      
+        <link rel="next" href="../../cancer-module-viz/visu/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -24,92 +27,119 @@
       
     
     
-      <script src="../../../assets/javascripts/modernizr-1df76c4e58.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/application-769c285a91.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f56500e0.min.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-02c2a4388f.palette.css">
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
+      
+
+    
     
     
       
         
         
-        
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
       <link rel="stylesheet" href="../../../css/details.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
     
     
   </head>
   
   
-  
-  
-    <body data-md-color-primary="indigo" data-md-color-accent="light-blue">
-  
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
         
-          <a href="../../.." title="Cancer Genomics Workshop" class="md-icon md-icon--home md-header-nav__button">
-          </a>
-        
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
-          
+        <a href="#key-learning-outcomes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Cancer Genomics Workshop" class="md-header__button md-logo" aria-label="Cancer Genomics Workshop" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cancer Genomics Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
-              
-                <span class="md-header-nav__parent">
-                  Hands-on Modules
-                </span>
-              
-                <span class="md-header-nav__parent">
-                  Somatic Mutations
-                </span>
-              
+              Cohort analysis for the identification of driver genes
             
-            Cohort analysis for the identification of driver genes
-          
-        </span>
+          </span>
+        </div>
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-          
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner">
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
-            Type to start searching
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -117,28 +147,38 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-    </div>
+    
+    
   </nav>
+  
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
       
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    
-      <i class="md-icon md-icon--home md-nav__button"></i>
-    
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Cancer Genomics Workshop" class="md-nav__button md-logo" aria-label="Cancer Genomics Workshop" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
     Cancer Genomics Workshop
   </label>
   
@@ -148,48 +188,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../../.." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../trainers/trainers/" title="The Trainers" class="md-nav__link">
-      The Trainers
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../timetables/timetable_cancer/" title="Timetable" class="md-nav__link">
-      Timetable
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../preamble/" title="Workshop Information" class="md-nav__link">
-      Workshop Information
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
@@ -197,186 +204,268 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
-    
-    <label class="md-nav__link" for="nav-5">
-      Hands-on Modules
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Hands-on Modules
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-cli/commandline/" title="Introduction to Command Line" class="md-nav__link">
-      Introduction to Command Line
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-qc/ngs-qc/" title="Quality Control" class="md-nav__link">
-      Quality Control
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-alignment/alignment/" title="Read Alignment" class="md-nav__link">
-      Read Alignment
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-snv/snv/" title="Single Nucleotide Variant Calling and Annotation" class="md-nav__link">
-      Single Nucleotide Variant Calling and Annotation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-cnv/cnv-tut/" title="Copy Number Variation" class="md-nav__link">
-      Copy Number Variation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-sv/sv_tut/" title="Structural Variant Analysis" class="md-nav__link">
-      Structural Variant Analysis
-    </a>
-  </li>
-
-        
-          
-          
-          
-
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trainers/trainers/" class="md-nav__link">
+        The Trainers
+      </a>
+    </li>
   
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7" checked>
-    
-    <label class="md-nav__link" for="nav-5-7">
-      Somatic Mutations
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-7">
-        Somatic Mutations
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../01_signatures/" title="Assessing somatic mutational signatures" class="md-nav__link">
-      Assessing somatic mutational signatures
-    </a>
-  </li>
-
-        
-          
-          
-          
+      
+      
+      
 
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../timetables/timetable_cancer/" class="md-nav__link">
+        Timetable
+      </a>
+    </li>
+  
 
+    
+      
+      
+      
 
-  <li class="md-nav__item md-nav__item--active">
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../preamble/" class="md-nav__link">
+        Workshop Information
+      </a>
+    </li>
+  
+
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+      
+      
+      
+
+  
+  
     
+  
+  
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Hands-on Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hands-on Modules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Hands-on Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-cli/commandline/" class="md-nav__link">
+        Introduction to Command Line
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-qc/ngs-qc/" class="md-nav__link">
+        Quality Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-alignment/alignment/" class="md-nav__link">
+        Read Alignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-snv/snv/" class="md-nav__link">
+        Single Nucleotide Variant Calling and Annotation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-cnv/cnv-tut/" class="md-nav__link">
+        Copy Number Variation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-sv/sv_tut/" class="md-nav__link">
+        Structural Variant Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7">
+          Somatic Mutations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Somatic Mutations" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          Somatic Mutations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_signatures/" class="md-nav__link">
+        Assessing somatic mutational signatures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cohort analysis for the identification of driver genes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Cohort analysis for the identification of driver genes
-      </label>
-    
-    <a href="./" title="Cohort analysis for the identification of driver genes" class="md-nav__link md-nav__link--active">
-      Cohort analysis for the identification of driver genes
-    </a>
-    
+      </a>
       
-<nav class="md-nav md-nav--secondary">
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-learning-outcomes" title="Key Learning Outcomes" class="md-nav__link">
+  <a href="#key-learning-outcomes" class="md-nav__link">
     Key Learning Outcomes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources-youll-be-using" title="Resources You’ll be Using" class="md-nav__link">
+  <a href="#resources-youll-be-using" class="md-nav__link">
     Resources You’ll be Using
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Resources You’ll be Using">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tools-used" title="Tools Used" class="md-nav__link">
+  <a href="#tools-used" class="md-nav__link">
     Tools Used
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sources-of-data" title="Sources of Data" class="md-nav__link">
+  <a href="#sources-of-data" class="md-nav__link">
     Sources of Data
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#useful-links" title="Useful Links" class="md-nav__link">
+  <a href="#useful-links" class="md-nav__link">
     Useful Links
   </a>
   
@@ -388,81 +477,89 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#author-information" title="Author Information" class="md-nav__link">
+  <a href="#author-information" class="md-nav__link">
     Author Information
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduction" title="Introduction" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#analysing-cancer-cohort-data-with-intogen" title="Analysing cancer cohort data with IntOGen" class="md-nav__link">
+  <a href="#analysing-cancer-cohort-data-with-intogen" class="md-nav__link">
     Analysing cancer cohort data with IntOGen
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exploring-the-output-of-intogen" title="Exploring the output of IntOGen" class="md-nav__link">
+  <a href="#exploring-the-output-of-intogen" class="md-nav__link">
     Exploring the output of IntOGen
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" title="References" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     References
   </a>
   
 </li>
       
-      
-      
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-viz/visu/" class="md-nav__link">
+        Variant Visualisation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-viz/visu/" title="Variant Visualisation" class="md-nav__link">
-      Variant Visualisation
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../../../license/" title="License" class="md-nav__link">
-      License
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -472,48 +569,54 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-learning-outcomes" title="Key Learning Outcomes" class="md-nav__link">
+  <a href="#key-learning-outcomes" class="md-nav__link">
     Key Learning Outcomes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources-youll-be-using" title="Resources You’ll be Using" class="md-nav__link">
+  <a href="#resources-youll-be-using" class="md-nav__link">
     Resources You’ll be Using
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Resources You’ll be Using">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tools-used" title="Tools Used" class="md-nav__link">
+  <a href="#tools-used" class="md-nav__link">
     Tools Used
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sources-of-data" title="Sources of Data" class="md-nav__link">
+  <a href="#sources-of-data" class="md-nav__link">
     Sources of Data
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#useful-links" title="Useful Links" class="md-nav__link">
+  <a href="#useful-links" class="md-nav__link">
     Useful Links
   </a>
   
@@ -525,41 +628,39 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#author-information" title="Author Information" class="md-nav__link">
+  <a href="#author-information" class="md-nav__link">
     Author Information
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduction" title="Introduction" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#analysing-cancer-cohort-data-with-intogen" title="Analysing cancer cohort data with IntOGen" class="md-nav__link">
+  <a href="#analysing-cancer-cohort-data-with-intogen" class="md-nav__link">
     Analysing cancer cohort data with IntOGen
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exploring-the-output-of-intogen" title="Exploring the output of IntOGen" class="md-nav__link">
+  <a href="#exploring-the-output-of-intogen" class="md-nav__link">
     Exploring the output of IntOGen
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" title="References" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     References
   </a>
   
 </li>
-      
-      
       
     </ul>
   
@@ -569,18 +670,21 @@
               </div>
             
           
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                
-                  <h1>Cohort analysis for the identification of driver genes</h1>
-                
-                <h2 id="key-learning-outcomes">Key Learning Outcomes<a class="headerlink" href="#key-learning-outcomes" title="Permanent link">&para;</a></h2>
+                  
+
+
+
+  <h1>Cohort analysis for the identification of driver genes</h1>
+
+<h2 id="key-learning-outcomes">Key Learning Outcomes<a class="headerlink" href="#key-learning-outcomes" title="Permanent link">&para;</a></h2>
 <p>After completing this practical the trainee should be able to:</p>
 <ul>
 <li>
-<p>Run the <code class="codehilite">IntOGen</code> analysis software on cohort mutation data.</p>
+<p>Run the <code>IntOGen</code> analysis software on cohort mutation data.</p>
 </li>
 <li>
 <p>Have gained experience of the structure of the analysis output files
@@ -662,29 +766,25 @@ help the identification of driver genes.</p>
 users to run their analysis on the host’s servers or it can be downloaded
 and run on a local server.</p>
 <p>For the purposes of the course we will be using a local version of
-<code class="codehilite">IntOGen</code> so that we don’t encounter any issues sharing resources.</p>
+<code>IntOGen</code> so that we don’t encounter any issues sharing resources.</p>
 <ul>
 <li>
-<p>To begin open a terminal and navigate to the directory <code class="codehilite">somatic/intogen</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/somatic/intogen
-</pre></div>
-</td></tr></table>
-
+<p>To begin open a terminal and navigate to the directory <code>somatic/intogen</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/somatic/intogen
+</code></pre></div>
 </li>
 </ul>
 <p>In this directory you will find a Mutation Annotation Format (MAF) file
 containing a cut down version of the somatic variant calls identified from
 melanoma samples investigated as part of the TCGA cancer genomics projects.
-You can see what files are in the directory by typing <code class="codehilite">ls</code>, look inside the
-file using <code class="codehilite">less TCGA_Melanoma_SMgene.maf</code> and close the file and return to
-the command line by typing <code class="codehilite">q</code>.</p>
+You can see what files are in the directory by typing <code>ls</code>, look inside the
+file using <code>less TCGA_Melanoma_SMgene.maf</code> and close the file and return to
+the command line by typing <code>q</code>.</p>
 <ul>
 <li>
-<p>Run the <code class="codehilite">IntOGen</code> analysis by typing</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>intogen -i TCGA_Melanoma_slimSMgene.maf -o TCGA_Mela_out
-</pre></div>
-</td></tr></table>
-
+<p>Run the <code>IntOGen</code> analysis by typing</p>
+<div class="highlight"><pre><span></span><code>intogen<span class="w"> </span>-i<span class="w"> </span>TCGA_Melanoma_slimSMgene.maf<span class="w"> </span>-o<span class="w"> </span>TCGA_Mela_out
+</code></pre></div>
 </li>
 </ul>
 <p>The TCGA melanoma maf used in this practical has been modified from the
@@ -694,78 +794,57 @@ original to reduce processing time and only contains data for the top
 indicated by the logging lines printed to the terminal. Once complete
 the output can be explored.</p>
 <p>Whilst the tool is running we can explore the options we have used to
-run <code class="codehilite">IntOGen</code>.</p>
+run <code>IntOGen</code>.</p>
 <ul>
-<li>To get a list of <code class="codehilite">IntOGen</code> options open up a new terminal</li>
+<li>To get a list of <code>IntOGen</code> options open up a new terminal</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>intogen --help
-</pre></div>
-</td></tr></table>
-
+<div class="highlight"><pre><span></span><code>intogen<span class="w"> </span>--help
+</code></pre></div>
 <p>This command will list the running options that you can alter as command line
 inputs or in a configuration file. We are using the default options for this run
-so we didn&rsquo;t have to supply a configuration file and we only used <code class="codehilite">-i</code> to set
-the input and <code class="codehilite">-o</code> to control the mane of the output directory.</p>
+so we didn&rsquo;t have to supply a configuration file and we only used <code>-i</code> to set
+the input and <code>-o</code> to control the mane of the output directory.</p>
 <ul>
 <li>To look at the default options open up the configuration file by typing  </li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>less ~./intogen/task.conf  
-less ~./intogen/system.conf
-</pre></div>
-</td></tr></table>
-
-<p>It is important to set the correct genome assembly in the <code class="codehilite">task.conf</code> to match
+<div class="highlight"><pre><span></span><code>less<span class="w"> </span>~./intogen/task.conf<span class="w">  </span>
+less<span class="w"> </span>~./intogen/system.conf
+</code></pre></div>
+<p>It is important to set the correct genome assembly in the <code>task.conf</code> to match
 the one that you used as your reference when the variant were called. In our
-<code class="codehilite">task.conf</code> this should be <code class="codehilite">hg19</code>.</p>
+<code>task.conf</code> this should be <code>hg19</code>.</p>
 <hr />
 <h2 id="exploring-the-output-of-intogen">Exploring the output of IntOGen<a class="headerlink" href="#exploring-the-output-of-intogen" title="Permanent link">&para;</a></h2>
 <p>When you run your data over the web on the remote site there is a browse
 facility that allows you to explore your data using the web version of
-the database. Running <code class="codehilite">IntOGen</code> locally provides the same tabular
+the database. Running <code>IntOGen</code> locally provides the same tabular
 information but in a flat file format.</p>
-<p>There should be 14 files generated from a successful run of this version of <code class="codehilite">IntOGen</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>gene.tsv
-gene.oncodriveclust
-pathway.recurrences
-gene.oncodrivefm
-sample_gene.impact
-gene.recurrences                                
-sample_variant+transcript.impact
-summary.tsv
-transcript.recurrences
-TCGA_Melanoma_slimSMgene.smconfig
-oncodrivefm-pathways-MA_SCORE.tsv
-oncodrivefm-pathways-PPH2_SCORE.tsv  
-oncodrivefm-pathways-SIFT_SCORE.tsv  
-pathway.oncodrivefm
-</pre></div>
-</td></tr></table>
+<p>There should be 14 files generated from a successful run of this version of <code>IntOGen</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">gene</span><span class="o">.</span><span class="n">tsv</span>
+<span class="n">gene</span><span class="o">.</span><span class="n">oncodriveclust</span>
+<span class="n">pathway</span><span class="o">.</span><span class="n">recurrences</span>
+<span class="n">gene</span><span class="o">.</span><span class="n">oncodrivefm</span>
+<span class="n">sample_gene</span><span class="o">.</span><span class="n">impact</span>
+<span class="n">gene</span><span class="o">.</span><span class="n">recurrences</span><span class="w">                                </span>
+<span class="n">sample_variant</span><span class="o">+</span><span class="n">transcript</span><span class="o">.</span><span class="n">impact</span>
+<span class="n">summary</span><span class="o">.</span><span class="n">tsv</span>
+<span class="n">transcript</span><span class="o">.</span><span class="n">recurrences</span>
+<span class="n">TCGA_Melanoma_slimSMgene</span><span class="o">.</span><span class="n">smconfig</span>
+<span class="n">oncodrivefm</span><span class="o">-</span><span class="n">pathways</span><span class="o">-</span><span class="n">MA_SCORE</span><span class="o">.</span><span class="n">tsv</span>
+<span class="n">oncodrivefm</span><span class="o">-</span><span class="n">pathways</span><span class="o">-</span><span class="n">PPH2_SCORE</span><span class="o">.</span><span class="n">tsv</span><span class="w">  </span>
+<span class="n">oncodrivefm</span><span class="o">-</span><span class="n">pathways</span><span class="o">-</span><span class="n">SIFT_SCORE</span><span class="o">.</span><span class="n">tsv</span><span class="w">  </span>
+<span class="n">pathway</span><span class="o">.</span><span class="n">oncodrivefm</span>
+</code></pre></div>
 
-<p>View these files by using <code class="codehilite">ls</code> as below.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ls ~/somatic/intogen/TCGA_Mela_out/project/TCGA_Melanoma_slimSMgene/
-</pre></div>
-</td></tr></table>
-
+<p>View these files by using <code>ls</code> as below.</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>~/somatic/intogen/TCGA_Mela_out/project/TCGA_Melanoma_slimSMgene/
+</code></pre></div>
 <p>This practical will concentrate on the identification of driver genes so
 we will look at the main output concerning genes.
-The <code class="codehilite">gene.tsv</code> is the main gene centric output summary table.</p>
+The <code>gene.tsv</code> is the main gene centric output summary table.</p>
 <ul>
 <li>
-<p>Open up the <code class="codehilite">gene.tsv</code> file in <code class="codehilite">LibreOffice</code> by double clicking on the icon on your
+<p>Open up the <code>gene.tsv</code> file in <code>LibreOffice</code> by double clicking on the icon on your
 desktop.</p>
 </li>
 <li>
@@ -773,27 +852,27 @@ desktop.</p>
 </li>
 <li>
 <p>Navigate to the results directory
-<code class="codehilite">~/somatic/intogen/TCGA_Mela_out/project/TCGA_Melanoma_slimSMgene/</code></p>
+<code>~/somatic/intogen/TCGA_Mela_out/project/TCGA_Melanoma_slimSMgene/</code></p>
 </li>
 <li>
-<p>Double click on <code class="codehilite">gene.tsv</code>.</p>
+<p>Double click on <code>gene.tsv</code>.</p>
 </li>
 <li>
-<p>In the pop-up box under the <code class="codehilite">Separator options</code> ensure only the tab box is
-checked and click <code class="codehilite">OK</code>.</p>
+<p>In the pop-up box under the <code>Separator options</code> ensure only the tab box is
+checked and click <code>OK</code>.</p>
 </li>
 </ul>
-<p>This file contains the overall summary results for the <code class="codehilite">IntOGen</code> pipeline
+<p>This file contains the overall summary results for the <code>IntOGen</code> pipeline
 presented by gene and reports Q values (i.e. multiple testing corrected
 P values) for the mutation frequency and cluster modules.</p>
 <p>Significantly mutated genes from the cohort data are identified using both
-the <code class="codehilite">OncodriveFM</code> and <code class="codehilite">OncodriveClUST</code> modules of <code class="codehilite">IntOGen</code>. The <code class="codehilite">OncodriveFM</code>
+the <code>OncodriveFM</code> and <code>OncodriveClUST</code> modules of <code>IntOGen</code>. The <code>OncodriveFM</code>
 module detects genes that have accumulated mutations with a high functional
 impact. It uses annotations from the Ensembl variant effect predictor (VEP, V.70)
 that includes SIFT and Polyphen2 and precomputed MutationAssessor functional
 impacts. It calculates a P value per gene from the number of mutations detected
 across all possible coding bases of a gene with a positive weighting for mutations
-with a high functional impact. The <code class="codehilite">OncodriveCLUST</code> module detects genes that
+with a high functional impact. The <code>OncodriveCLUST</code> module detects genes that
 have more variants than would be expected across the cohort that alter the
 same region of the gene.</p>
 <p>The file is sorted to bring the most significantly altered genes to the top. The key
@@ -806,7 +885,7 @@ NRAS and TP53. The next 35 are significant by only one of the modules.</p>
 significantly mutated genes in this TCGA Melanoma cohort of 338
 patients.</p>
 <ul>
-<li>Now look at their sample frequency count (column 9 <code class="codehilite">MUTS_CS_SAMPLES</code>) these
+<li>Now look at their sample frequency count (column 9 <code>MUTS_CS_SAMPLES</code>) these
 are the number of samples that contain at least one mutation in the gene.</li>
 </ul>
 <div class="admonition note">
@@ -814,20 +893,25 @@ are the number of samples that contain at least one mutation in the gene.</li>
 <p>a)   Which significantly mutated gene has mutations in the most samples?</p>
 <p>b)   Which gene/genes have the lowest Q-value from OncodriveFM and OncodriveCLUST?</p>
 <p>c)   Why don’t the genes with the lowest Q values also have the highest sample frequency value?</p>
-<div class="admonition success"><details><summary><strong>Answer</strong></summary><p>a)  BRAF has 175 out of 327 cases with a mutation.</p><p>b)  TP53 or PTEN have the lowest OncodriveFM Q-values and NRAS
-has the lowest Q-value for OncodriveCLUST.</p><p>c)  The P value calculation takes into account the length of the
+<div class="admonition success">
+<details><summary><strong>Answer</strong></summary><p>a)  BRAF has 175 out of 327 cases with a mutation.</p>
+<p>b)  TP53 or PTEN have the lowest OncodriveFM Q-values and NRAS
+has the lowest Q-value for OncodriveCLUST.</p>
+<p>c)  The P value calculation takes into account the length of the
     coding sequence of the gene, the mutation rate of the nucleotides
     contained within it and for OncodriveFM the functional consequences
     of those changes. Therefore a small gene with a small number of deleterious
     mutations may have a lower P value and also Q value than a large
-    gene with a high mutation frequency.</p></details></div>
+    gene with a high mutation frequency.</p>
+</details>
+</div>
 </div>
 <p>The results for the assessment of clustered mutations in genes carried
-out by the <code class="codehilite">OncodriveCLUST</code> module of <code class="codehilite">IntOGen</code> are shown as  amino
+out by the <code>OncodriveCLUST</code> module of <code>IntOGen</code> are shown as  amino
 acid residue positions of the encoded protein.</p>
 <p>The three known oncogenes BRAF, NRAS and IDH1 have very low CLUST_QVALUEs
 indicating that the mutations in these genes are highly clustered. The
-<code class="codehilite">CLUST_COORDS</code> column reports that there are 160 samples with mutations
+<code>CLUST_COORDS</code> column reports that there are 160 samples with mutations
 between the amino acid positions 594-601 of BRAF; 84 samples with mutations
 at amino acid position 61 of NRAS; and 15 sample with mutations at amino
 acid position 132 of IDH1.</p>
@@ -835,29 +919,35 @@ acid position 132 of IDH1.</p>
 <p class="admonition-title">Question</p>
 <p>Why are the oncogenes more likely to have clustered mutations and the
 tumour suppressor genes less likely?</p>
-<div class="admonition success"><details><summary><strong>Answer</strong></summary><p>Gain of function mutations are required to activate oncogenes and so
+<div class="admonition success">
+<details><summary><strong>Answer</strong></summary><p>Gain of function mutations are required to activate oncogenes and so
 only key residues in the protein will result in activation. Tumour
 suppressors are frequently affected by loss of function mutations and
 deletions. A truncating mutation or frameshift indel can occur in any
 exon, except the last one, and have the same deleterious functional
-result.</p></details></div>
+result.</p>
+</details>
+</div>
 </div>
 <p><br>
 The other files in the output support the information in this sheet.</p>
-<p>The <code class="codehilite">sample_variant+transcript.impact</code> file includes a summary of all mutations
+<p>The <code>sample_variant+transcript.impact</code> file includes a summary of all mutations
 found in each of the genes and protein coding transcripts of those genes for all
 samples identified that have that mutation. It also reports the variant impact scores
 from SIFT, PolyPhen2, MutationAssesor, reporting also impact categories of which
 there are four; high, medium, low and none.</p>
 <ul>
-<li>Open up the <code class="codehilite">sample_variant+transcript.impact</code> file and explore the data.</li>
+<li>Open up the <code>sample_variant+transcript.impact</code> file and explore the data.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
 <p>Can you find out what the nucleotide change details for the most common
 BRAF mutation that results in V600E amino acid change in the cohort?
-Sort the data by GENE, then TRANSCRIPT and then PROTEIN_POS to make this easier. The gene ID for BRAF is <code class="codehilite">ENSG00000157764</code>.</p>
-<div class="admonition success"><details><summary><strong>Answer</strong></summary><p>It is an A&gt;T at position chr7:140453136 identified in 127 samples.</p></details></div>
+Sort the data by GENE, then TRANSCRIPT and then PROTEIN_POS to make this easier. The gene ID for BRAF is <code>ENSG00000157764</code>.</p>
+<div class="admonition success">
+<details><summary><strong>Answer</strong></summary><p>It is an A&gt;T at position chr7:140453136 identified in 127 samples.</p>
+</details>
+</div>
 </div>
 <hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
@@ -865,90 +955,55 @@ Sort the data by GENE, then TRANSCRIPT and then PROTEIN_POS to make this easier.
 :   <a href="http://www.nature.com/nmeth/journal/v7/n2/pdf/nmeth0210-92.pdf">http://www.nature.com/nmeth/journal/v7/n2/pdf/nmeth0210-92.pdf</a></p>
 <p>Gonzalez-Perez et al. Nat. Methods 2013
 :   <a href="http://www.nature.com/nmeth/journal/v10/n11/pdf/nmeth.2642.pdf">http://www.nature.com/nmeth/journal/v10/n11/pdf/nmeth.2642.pdf</a></p>
+
+
+
+
+
                 
-                  
-                
-              
-              
-                
-              
-            </article>
-          </div>
+              </article>
+            </div>
+          
+          
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../01_signatures/" title="Assessing somatic mutational signatures" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Assessing somatic mutational signatures
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../../cancer-module-viz/visu/" title="Variant Visualisation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Variant Visualisation
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            &copy; The authors; 2017-
-          </div>
-        
-        powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
-        and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
-          Material for MkDocs</a>
-      </div>
-      
-        
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; The authors; 2017-
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-      <script src="../../../assets/javascripts/application-07b0fbb49b.js"></script>
-      
-      
-      <script>app.initialize({url:{base:"../../.."}})</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
         <script src="../../../js/details.js"></script>
-      
-    
-    
       
     
   </body>

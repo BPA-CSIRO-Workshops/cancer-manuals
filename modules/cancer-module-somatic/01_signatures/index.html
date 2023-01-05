@@ -1,22 +1,25 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
         <meta name="description" content="This contains all material for the Cancer Genomics workshop.">
-      
       
       
         <meta name="author" content="Authors">
       
       
-        <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.5">
+        <link rel="prev" href="../../cancer-module-sv/sv_tut/">
+      
+      
+        <link rel="next" href="../02_intogen/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -24,92 +27,119 @@
       
     
     
-      <script src="../../../assets/javascripts/modernizr-1df76c4e58.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/application-769c285a91.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f56500e0.min.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-02c2a4388f.palette.css">
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
+      
+
+    
     
     
       
         
         
-        
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
       <link rel="stylesheet" href="../../../css/details.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
     
     
   </head>
   
   
-  
-  
-    <body data-md-color-primary="indigo" data-md-color-accent="light-blue">
-  
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
         
-          <a href="../../.." title="Cancer Genomics Workshop" class="md-icon md-icon--home md-header-nav__button">
-          </a>
-        
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
-          
+        <a href="#key-learning-outcomes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Cancer Genomics Workshop" class="md-header__button md-logo" aria-label="Cancer Genomics Workshop" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cancer Genomics Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
-              
-                <span class="md-header-nav__parent">
-                  Hands-on Modules
-                </span>
-              
-                <span class="md-header-nav__parent">
-                  Somatic Mutations
-                </span>
-              
+              Assessing somatic mutational signatures
             
-            Assessing somatic mutational signatures
-          
-        </span>
+          </span>
+        </div>
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-          
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner">
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
-            Type to start searching
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -117,28 +147,38 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-    </div>
+    
+    
   </nav>
+  
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
       
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    
-      <i class="md-icon md-icon--home md-nav__button"></i>
-    
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Cancer Genomics Workshop" class="md-nav__button md-logo" aria-label="Cancer Genomics Workshop" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
     Cancer Genomics Workshop
   </label>
   
@@ -148,48 +188,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../../.." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../trainers/trainers/" title="The Trainers" class="md-nav__link">
-      The Trainers
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../timetables/timetable_cancer/" title="Timetable" class="md-nav__link">
-      Timetable
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../preamble/" title="Workshop Information" class="md-nav__link">
-      Workshop Information
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
@@ -197,174 +204,254 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
-    
-    <label class="md-nav__link" for="nav-5">
-      Hands-on Modules
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Hands-on Modules
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-cli/commandline/" title="Introduction to Command Line" class="md-nav__link">
-      Introduction to Command Line
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-qc/ngs-qc/" title="Quality Control" class="md-nav__link">
-      Quality Control
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-alignment/alignment/" title="Read Alignment" class="md-nav__link">
-      Read Alignment
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-snv/snv/" title="Single Nucleotide Variant Calling and Annotation" class="md-nav__link">
-      Single Nucleotide Variant Calling and Annotation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-cnv/cnv-tut/" title="Copy Number Variation" class="md-nav__link">
-      Copy Number Variation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-sv/sv_tut/" title="Structural Variant Analysis" class="md-nav__link">
-      Structural Variant Analysis
-    </a>
-  </li>
-
-        
-          
-          
-          
-
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trainers/trainers/" class="md-nav__link">
+        The Trainers
+      </a>
+    </li>
   
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7" checked>
-    
-    <label class="md-nav__link" for="nav-5-7">
-      Somatic Mutations
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-7">
-        Somatic Mutations
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
+      
+      
+      
 
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../timetables/timetable_cancer/" class="md-nav__link">
+        Timetable
+      </a>
+    </li>
+  
 
+    
+      
+      
+      
 
-  <li class="md-nav__item md-nav__item--active">
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../preamble/" class="md-nav__link">
+        Workshop Information
+      </a>
+    </li>
+  
+
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+      
+      
+      
+
+  
+  
     
+  
+  
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Hands-on Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hands-on Modules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Hands-on Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-cli/commandline/" class="md-nav__link">
+        Introduction to Command Line
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-qc/ngs-qc/" class="md-nav__link">
+        Quality Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-alignment/alignment/" class="md-nav__link">
+        Read Alignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-snv/snv/" class="md-nav__link">
+        Single Nucleotide Variant Calling and Annotation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-cnv/cnv-tut/" class="md-nav__link">
+        Copy Number Variation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-sv/sv_tut/" class="md-nav__link">
+        Structural Variant Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7">
+          Somatic Mutations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Somatic Mutations" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          Somatic Mutations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Assessing somatic mutational signatures
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Assessing somatic mutational signatures
-      </label>
-    
-    <a href="./" title="Assessing somatic mutational signatures" class="md-nav__link md-nav__link--active">
-      Assessing somatic mutational signatures
-    </a>
-    
+      </a>
       
-<nav class="md-nav md-nav--secondary">
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-learning-outcomes" title="Key Learning Outcomes" class="md-nav__link">
+  <a href="#key-learning-outcomes" class="md-nav__link">
     Key Learning Outcomes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources-youll-be-using" title="Resources You’ll be Using" class="md-nav__link">
+  <a href="#resources-youll-be-using" class="md-nav__link">
     Resources You’ll be Using
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Resources You’ll be Using">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tools-used" title="Tools Used" class="md-nav__link">
+  <a href="#tools-used" class="md-nav__link">
     Tools Used
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sources-of-data" title="Sources of Data" class="md-nav__link">
+  <a href="#sources-of-data" class="md-nav__link">
     Sources of Data
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#useful-links" title="Useful Links" class="md-nav__link">
+  <a href="#useful-links" class="md-nav__link">
     Useful Links
   </a>
   
@@ -376,114 +463,124 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#author-information" title="Author Information" class="md-nav__link">
+  <a href="#author-information" class="md-nav__link">
     Author Information
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduction" title="Introduction" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#preparing-the-r-environment" title="Preparing the R environment" class="md-nav__link">
+  <a href="#preparing-the-r-environment" class="md-nav__link">
     Preparing the R environment
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#loading-and-preparing-the-snv-mutation-data" title="Loading and preparing the SNV mutation data" class="md-nav__link">
+  <a href="#loading-and-preparing-the-snv-mutation-data" class="md-nav__link">
     Loading and preparing the SNV mutation data
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#snv-mutation-context" title="SNV mutation context" class="md-nav__link">
+  <a href="#snv-mutation-context" class="md-nav__link">
     SNV mutation context
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-nmf-analysis" title="Running the NMF analysis" class="md-nav__link">
+  <a href="#running-the-nmf-analysis" class="md-nav__link">
     Running the NMF analysis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#interpreting-the-signature-results" title="Interpreting the signature results" class="md-nav__link">
+  <a href="#interpreting-the-signature-results" class="md-nav__link">
     Interpreting the signature results
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" title="References" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     References
   </a>
   
 </li>
       
-      
-      
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_intogen/" class="md-nav__link">
+        Cohort analysis for the identification of driver genes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cancer-module-viz/visu/" class="md-nav__link">
+        Variant Visualisation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../02_intogen/" title="Cohort analysis for the identification of driver genes" class="md-nav__link">
-      Cohort analysis for the identification of driver genes
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cancer-module-viz/visu/" title="Variant Visualisation" class="md-nav__link">
-      Variant Visualisation
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../../../license/" title="License" class="md-nav__link">
-      License
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -493,48 +590,54 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-learning-outcomes" title="Key Learning Outcomes" class="md-nav__link">
+  <a href="#key-learning-outcomes" class="md-nav__link">
     Key Learning Outcomes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources-youll-be-using" title="Resources You’ll be Using" class="md-nav__link">
+  <a href="#resources-youll-be-using" class="md-nav__link">
     Resources You’ll be Using
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Resources You’ll be Using">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tools-used" title="Tools Used" class="md-nav__link">
+  <a href="#tools-used" class="md-nav__link">
     Tools Used
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sources-of-data" title="Sources of Data" class="md-nav__link">
+  <a href="#sources-of-data" class="md-nav__link">
     Sources of Data
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#useful-links" title="Useful Links" class="md-nav__link">
+  <a href="#useful-links" class="md-nav__link">
     Useful Links
   </a>
   
@@ -546,62 +649,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#author-information" title="Author Information" class="md-nav__link">
+  <a href="#author-information" class="md-nav__link">
     Author Information
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduction" title="Introduction" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#preparing-the-r-environment" title="Preparing the R environment" class="md-nav__link">
+  <a href="#preparing-the-r-environment" class="md-nav__link">
     Preparing the R environment
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#loading-and-preparing-the-snv-mutation-data" title="Loading and preparing the SNV mutation data" class="md-nav__link">
+  <a href="#loading-and-preparing-the-snv-mutation-data" class="md-nav__link">
     Loading and preparing the SNV mutation data
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#snv-mutation-context" title="SNV mutation context" class="md-nav__link">
+  <a href="#snv-mutation-context" class="md-nav__link">
     SNV mutation context
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-nmf-analysis" title="Running the NMF analysis" class="md-nav__link">
+  <a href="#running-the-nmf-analysis" class="md-nav__link">
     Running the NMF analysis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#interpreting-the-signature-results" title="Interpreting the signature results" class="md-nav__link">
+  <a href="#interpreting-the-signature-results" class="md-nav__link">
     Interpreting the signature results
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" title="References" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     References
   </a>
   
 </li>
-      
-      
       
     </ul>
   
@@ -611,14 +712,17 @@
               </div>
             
           
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                
-                  <h1>Assessing somatic mutational signatures</h1>
-                
-                <h2 id="key-learning-outcomes">Key Learning Outcomes<a class="headerlink" href="#key-learning-outcomes" title="Permanent link">&para;</a></h2>
+                  
+
+
+
+  <h1>Assessing somatic mutational signatures</h1>
+
+<h2 id="key-learning-outcomes">Key Learning Outcomes<a class="headerlink" href="#key-learning-outcomes" title="Permanent link">&para;</a></h2>
 <p>After completing this practical the trainee should be able to:</p>
 <ul>
 <li>
@@ -719,53 +823,40 @@ across cancer types.</p>
 <h2 id="preparing-the-r-environment">Preparing the R environment<a class="headerlink" href="#preparing-the-r-environment" title="Permanent link">&para;</a></h2>
 <p>The mathematical framework developed by Alexandrov <em>et al.</em> was implemented
 in MATLAB. We are going to use a version implemented in R by Gehring <em>et
-al.</em> called <code class="codehilite">SomaticSignatures package</code>, that is very quick and flexible
+al.</em> called <code>SomaticSignatures package</code>, that is very quick and flexible
 but currently only accepts point mutations not insertions or deletions
 (indels). In tests on our data we have found that the Somatic Signatures
 package in R returns very similar results to the full implementation of
 Alexandrov’s framework.</p>
 <p>The data files you will need are contained in the subdirectory called
-<code class="codehilite">somatic/somatic_signatures</code>:</p>
-<p>Open the Terminal and go to the <code class="codehilite">somatic_signatures</code> working directory:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/somatic/somatic_signatures
+<code>somatic/somatic_signatures</code>:</p>
+<p>Open the Terminal and go to the <code>somatic_signatures</code> working directory:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/somatic/somatic_signatures
 <span class="nb">pwd</span>
-</pre></div>
-</td></tr></table>
-
+</code></pre></div>
 <p>In this folder you should find 12 files that end with the extension
-<code class="codehilite"><span class="na">.vcf</span></code>. Use the list command to make sure you can see them.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ls
-</pre></div>
-</td></tr></table>
-
+<code>.vcf</code>. Use the list command to make sure you can see them.</p>
+<div class="highlight"><pre><span></span><code>ls
+</code></pre></div>
 <p>These files contain data extracted from the TCGA melanoma paper and
 Australian ICGC ovarian paper both mentioned in the introductory slides.
 They have been edited in order to allow this practical to run quickly
 and are not good examples of VCF files.</p>
 <p>Start R and set the working directory. Just start by typing R onto the
 command line.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>R
-</pre></div>
-</td></tr></table>
+<div class="codehilite"><pre><span></span><code>R
+</code></pre></div>
 
 <p>Load all the package libraries needed for this analysis by running the
 commands.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>SomaticSignatures<span class="p">)</span>
-<span class="kn">library</span><span class="p">(</span>BSgenome.Hsapiens.UCSC.hg19<span class="p">)</span>
-<span class="kn">library</span><span class="p">(</span>ggplot2<span class="p">)</span>
-<span class="kn">library</span><span class="p">(</span>Cairo<span class="p">)</span>
-</pre></div>
-</td></tr></table>
-
+<div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">SomaticSignatures</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">BSgenome.Hsapiens.UCSC.hg19</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">Cairo</span><span class="p">)</span>
+</code></pre></div>
 <p>Set the directory where any output files will be generated</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">setwd</span><span class="p">(</span><span class="s">&quot;~/somatic/somatic_signatures&quot;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
-
+<div class="highlight"><pre><span></span><code><span class="nf">setwd</span><span class="p">(</span><span class="s">&quot;~/somatic/somatic_signatures&quot;</span><span class="p">)</span>
+</code></pre></div>
 <hr />
 <h2 id="loading-and-preparing-the-snv-mutation-data">Loading and preparing the SNV mutation data<a class="headerlink" href="#loading-and-preparing-the-snv-mutation-data" title="Permanent link">&para;</a></h2>
 <p>The mutations used in this analysis need to be high quality somatic
@@ -784,93 +875,78 @@ mutations</p>
 </li>
 </ul>
 <p>Read in the mutations from the 12 VCF files</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>files <span class="o">&lt;-</span> <span class="kp">list.files</span><span class="p">(</span><span class="s">&quot;~/somatic/somatic_signatures&quot;</span><span class="p">,</span> pattern<span class="o">=</span><span class="s">&quot;vcf$&quot;</span><span class="p">,</span> full.names<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
-
+<div class="highlight"><pre><span></span><code><span class="n">files</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;~/somatic/somatic_signatures&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="o">=</span><span class="s">&quot;vcf$&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</code></pre></div>
 <p>To make sure all the files are listed run the command.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>files
-</pre></div>
-</td></tr></table>
-
+<div class="highlight"><pre><span></span><code><span class="n">files</span>
+</code></pre></div>
 <p>You should see a list of 12 sample files.</p>
 <p>Next read in all the genomic positions of variants in the VCF files
-using the <code class="codehilite">vranges</code> class.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>vranges <span class="o">&lt;-</span> <span class="kp">lapply</span><span class="p">(</span>files<span class="p">,</span> <span class="kr">function</span><span class="p">(</span>v<span class="p">)</span> readVcfAsVRanges<span class="p">(</span>v<span class="p">,</span><span class="s">&quot;hg19&quot;</span><span class="p">))</span>
-</pre></div>
-</td></tr></table>
-
+using the <code>vranges</code> class.</p>
+<div class="highlight"><pre><span></span><code><span class="n">vranges</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="n">files</span><span class="p">,</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="nf">readVcfAsVRanges</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="s">&quot;hg19&quot;</span><span class="p">))</span>
+</code></pre></div>
 <p>Join all the lists of variant positions into one big data set so that it
 can be processed together and look at what is contained in the
-concatenated <code class="codehilite">vranges</code> data</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>vranges.cat <span class="o">&lt;-</span> <span class="kp">do.call</span><span class="p">(</span><span class="kt">c</span><span class="p">,</span>vranges<span class="p">)</span>
-vranges.cat
-</pre></div>
-</td></tr></table>
-
-<p>The first line of output of the <code class="codehilite">vranges.cat</code> shows us that in total we
+concatenated <code>vranges</code> data</p>
+<div class="highlight"><pre><span></span><code><span class="n">vranges.cat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">do.call</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">vranges</span><span class="p">)</span>
+<span class="n">vranges.cat</span>
+</code></pre></div>
+<p>The first line of output of the <code>vranges.cat</code> shows us that in total we
 have put over 100,000 mutations recording the chromosome positions and
 mutation base changes along with what sample they were seen in.</p>
 <p>Note there are a lot of NA values in this data set because we have left
 out non-essential information in order to cut down on the processing
 time.</p>
-<p>Next we need to ensure all the positions in the <code class="codehilite">vranges</code> object have been
+<p>Next we need to ensure all the positions in the <code>vranges</code> object have been
 recorded in UCSC notation form so that they will match up with the
 reference we are using.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>vranges.cat <span class="o">&lt;-</span> ucsc<span class="p">(</span>vranges.cat<span class="p">)</span>
-</pre></div>
-</td></tr></table>
-
+<div class="highlight"><pre><span></span><code><span class="n">vranges.cat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ucsc</span><span class="p">(</span><span class="n">vranges.cat</span><span class="p">)</span>
+</code></pre></div>
 <p>It is always important to select the correct reference for your data.</p>
 <p>We can print out how many mutations we have read in for each of the
 cancer samples we are using by using the command.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">print</span><span class="p">(</span><span class="kp">table</span><span class="p">(</span>sampleNames<span class="p">(</span>vranges.cat<span class="p">)))</span>
-</pre></div>
-</td></tr></table>
-
+<div class="highlight"><pre><span></span><code><span class="nf">print</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="nf">sampleNames</span><span class="p">(</span><span class="n">vranges.cat</span><span class="p">)))</span>
+</code></pre></div>
 <p>We have now added all the positional and base change information now we
 can use the reference and the position of the mutation to look up the
 bases on either side of the mutation i.e. the mutation context.</p>
 <p>Run the mutationContext function of SomaticSignatures.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mc <span class="o">&lt;-</span> mutationContext<span class="p">(</span>vranges.cat<span class="p">,</span> BSgenome.Hsapiens.UCSC.hg19<span class="p">)</span>
-</pre></div>
-</td></tr></table>
-
-<p>We can inspect what information we had added to the <code class="codehilite">vranges.cat</code> object
-by typing <code class="codehilite">mc</code> on the command line. Notice that the mutation and its
+<div class="highlight"><pre><span></span><code><span class="n">mc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">mutationContext</span><span class="p">(</span><span class="n">vranges.cat</span><span class="p">,</span><span class="w"> </span><span class="n">BSgenome.Hsapiens.UCSC.hg19</span><span class="p">)</span>
+</code></pre></div>
+<p>We can inspect what information we had added to the <code>vranges.cat</code> object
+by typing <code>mc</code> on the command line. Notice that the mutation and its
 context have been added to the last two columns.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mc
-</pre></div>
-</td></tr></table>
-
+<div class="highlight"><pre><span></span><code><span class="n">mc</span>
+</code></pre></div>
 <hr />
 <h2 id="snv-mutation-context">SNV mutation context<a class="headerlink" href="#snv-mutation-context" title="Permanent link">&para;</a></h2>
 <p>There are a total of 96 possible single base mutations and context
 combinations. We can calculate this by listing out the six possible
 types of single nucleotide mutations:</p>
-<p><pre>
+<pre>
   -   C/A   the reverse compliment (G/T) is also in this group
   -   C/G   includes (G/C)
   -   C/T   includes (G/C)
   -   T/A   includes (A/T)
   -   T/C   includes (A/G)
   -   T/G   includes (A/C)
-  </pre></p>
+  </pre>
+
 <p>The neighbouring bases, on either side of a mutation, are referred to as
 the mutation context. There are 16 possible combinations of mutation
 contexts. Here [.] stands for one of the mutations listed above.</p>
-<p><pre>
+<pre>
   -   A[.]A   A[.]C   A[.]G   A[.]T
   -   C[.]A   C[.]C   C[.]G   C[.]T
   -   G[.]A   G[.]C   G[.]G   G[.]T
   -   T[.]A   T[.]C   T[.]G   T[.]T
-  </pre></p>
+  </pre>
+
 <p>Now if we substitute the [.]’s with each of the 6 different mutations
 you will find there are 96 possible types of combined mutations and
 contexts (6 x 16).</p>
 <p>Start by substituting [.] for the A/C mutation type</p>
-<p><pre>
+<pre>
   -   A[C/A]A
   -   A[C/A]C
   -   A[C/A]G
@@ -878,28 +954,32 @@ contexts (6 x 16).</p>
   -   C[C/A]A
   -   C[C/A]C
   -   C[C/A]G
-  </pre></p>
+  </pre>
+
 <p>and so on&hellip;</p>
 <p>We assign all the somatic mutations identified in a single tumour to one
 of these categories and total up the number in each.</p>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
 <p>What about a mutation that looks like G[A/C]A, where should this go?</p>
-<div class="admonition hint"><details><summary><strong>Hint</strong></summary><p>Remember to reverse compliment all the nucleotides.</p></details></div>
-<div class="admonition success"><details><summary><strong>Answer</strong></summary><p>In the T[T/G]C context count.</p></details></div>
+<div class="admonition hint">
+<details><summary><strong>Hint</strong></summary><p>Remember to reverse compliment all the nucleotides.</p>
+</details>
+</div>
+<div class="admonition success">
+<details><summary><strong>Answer</strong></summary><p>In the T[T/G]C context count.</p>
+</details>
+</div>
 </div>
 <p><br>
 Now we have all the information that is needed for each sample we can
 make a matrix that contains counts of mutations in each of the 96
 possible combinations of mutations and contexts counting up the totals
 separately for each sample</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mm <span class="o">&lt;-</span> motifMatrix<span class="p">(</span>mc<span class="p">,</span> group <span class="o">=</span> <span class="s">&quot;sampleNames&quot;</span><span class="p">,</span> normalize<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-<span class="kp">dim</span><span class="p">(</span>mm<span class="p">)</span>
-</pre></div>
-</td></tr></table>
-
-<p>The output of the <code class="codehilite">dim(mm)</code> command show us that there are 96 rows
+<div class="highlight"><pre><span></span><code><span class="n">mm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">motifMatrix</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;sampleNames&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">normalize</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="nf">dim</span><span class="p">(</span><span class="n">mm</span><span class="p">)</span>
+</code></pre></div>
+<p>The output of the <code>dim(mm)</code> command show us that there are 96 rows
 (these are the context values) and 12 columns which are the 12 samples.</p>
 <hr />
 <h2 id="running-the-nmf-analysis">Running the NMF analysis<a class="headerlink" href="#running-the-nmf-analysis" title="Permanent link">&para;</a></h2>
@@ -915,20 +995,14 @@ this practical. If you have more samples from potentially diverse
 sources you may need to run with a larger range of signatures and with
 more replicates.</p>
 <p>To find out how many signatures we have in the data run the command.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>gof_nmf <span class="o">&lt;-</span> assessNumberSignatures<span class="p">(</span>mm<span class="p">,</span> <span class="m">2</span><span class="o">:</span><span class="m">10</span><span class="p">,</span> nReplicates <span class="o">=</span> <span class="m">5</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
-
+<div class="highlight"><pre><span></span><code><span class="n">gof_nmf</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">assessNumberSignatures</span><span class="p">(</span><span class="n">mm</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">nReplicates</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+</code></pre></div>
 <p>Visualise the results from the NMF processing by making a pdf of the
 plot</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pdf<span class="p">(</span>file<span class="o">=</span><span class="s">&quot;plotNumberOfSignatures.pdf&quot;</span><span class="p">,</span> width<span class="o">=</span><span class="m">9</span><span class="p">,</span> height<span class="o">=</span><span class="m">8</span><span class="p">)</span>
-plotNumberSignatures<span class="p">(</span>gof_nmf<span class="p">)</span>
-dev.off<span class="p">()</span>
-</pre></div>
-</td></tr></table>
-
+<div class="highlight"><pre><span></span><code><span class="nf">pdf</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&quot;plotNumberOfSignatures.pdf&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="o">=</span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="m">8</span><span class="p">)</span>
+<span class="nf">plotNumberSignatures</span><span class="p">(</span><span class="n">gof_nmf</span><span class="p">)</span>
+<span class="nf">dev.off</span><span class="p">()</span>
+</code></pre></div>
 <p>Open up the PDF and examine the curve. The plotNumberOfSignatures PDF
 that will have been made in the working directory that you set up at the
 beginning</p>
@@ -946,20 +1020,14 @@ here let’s go for 3. This is where the gradient of both curves have
 started to flatten out.</p>
 <p>Now run the NMF again but this time stipulating that you want to group
 the data into 3 different mutational signatures.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  sigs_nmf <span class="o">=</span> identifySignatures<span class="p">(</span>mm<span class="p">,</span> <span class="m">3</span><span class="p">,</span> nmfDecomposition<span class="p">)</span>
-</pre></div>
-</td></tr></table>
-
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">sigs_nmf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">identifySignatures</span><span class="p">(</span><span class="n">mm</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">nmfDecomposition</span><span class="p">)</span>
+</code></pre></div>
 <p>Visualise the shape of the profiles for these 3 signatures</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  pdf<span class="p">(</span>file<span class="o">=</span><span class="s">&quot;plot3Signatures.pdf&quot;</span><span class="p">,</span> width<span class="o">=</span><span class="m">10</span><span class="p">,</span> height<span class="o">=</span><span class="m">8</span><span class="p">)</span>
-  plotSignatures<span class="p">(</span>sigs_nmf<span class="p">,</span>normalize<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> percent<span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span> ggtitle<span class="p">(</span><span class="s">&quot;Somatic Signatures: NMF - Barchart&quot;</span><span class="p">)</span> <span class="o">+</span> scale_fill_brewer<span class="p">(</span>palette <span class="o">=</span> <span class="s">&quot;Set2&quot;</span><span class="p">)</span>
-  dev.off<span class="p">()</span>
-</pre></div>
-</td></tr></table>
-
-<p>Open up <code class="codehilite">plot3Signatures.pdf</code> that will have been made in the working
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nf">pdf</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&quot;plot3Signatures.pdf&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="m">8</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">plotSignatures</span><span class="p">(</span><span class="n">sigs_nmf</span><span class="p">,</span><span class="n">normalize</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">percent</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Somatic Signatures: NMF - Barchart&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">scale_fill_brewer</span><span class="p">(</span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Set2&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">dev.off</span><span class="p">()</span>
+</code></pre></div>
+<p>Open up <code>plot3Signatures.pdf</code> that will have been made in the working
 directory.</p>
 <p>You should have generated a plot with three signature profiles obtained
 from the NMF processing of the test dataset.</p>
@@ -986,7 +1054,20 @@ combinations in each signature. <em>Source</em>: Alexandrov <em>et al.</em> Natu
 <p>Can you match up, by eye, the profile shapes against a selection of
 known mutational signatures supplied (Figure 2)?</p>
 <p>Try to match up the patterns made by the positions of the highest peaks for each signature.</p>
-<div class="admonition success"><details><summary><strong>Answer</strong></summary><ul><li><p>Alexandrov signature 7 matches with our signature 1</p></li><li><p>Alexandrov signature 13 matches with our signature 2</p></li><li><p>Alexandrov signature 3 matches with our signature 3</p></li></ul></details></div>
+<div class="admonition success">
+<details><summary><strong>Answer</strong></summary><ul>
+<li>
+<p>Alexandrov signature 7 matches with our signature 1</p>
+</li>
+<li>
+<p>Alexandrov signature 13 matches with our signature 2</p>
+</li>
+<li>
+<p>Alexandrov signature 3 matches with our signature 3</p>
+</li>
+</ul>
+</details>
+</div>
 </div>
 <p><br>
 Now use the table from Alexandrov <em>et al.</em> to identify which mutational
@@ -1002,37 +1083,43 @@ that sample type. Where verified the mutational process is listed on the right.
 <p class="admonition-title">Question</p>
 <p>What mutational mechanisms have been associated with the signatures that
 you have generated?</p>
-<div class="admonition success"><details><summary><strong>Answer</strong></summary><ul><li><p>Our signature 1 (AS7) is associated with Ultraviolet radiation
+<div class="admonition success">
+<details><summary><strong>Answer</strong></summary><ul>
+<li>
+<p>Our signature 1 (AS7) is associated with Ultraviolet radiation
     damage to DNA. This has previously been identified in Head and Neck
-    and Melanoma cancer samples.</p></li><li><p>Our signature 2 (AS 13) is associated with the activity of
+    and Melanoma cancer samples.</p>
+</li>
+<li>
+<p>Our signature 2 (AS 13) is associated with the activity of
     anti-viral APOBEC enzymes. This has previously been seen in Breast
-    and Bladder cancer samples.</p></li><li><p>Our signature 3 (AS3) is associated with BRCA1 and BRCA2 mutations,
+    and Bladder cancer samples.</p>
+</li>
+<li>
+<p>Our signature 3 (AS3) is associated with BRCA1 and BRCA2 mutations,
     i.e. the homologous recombination repair pathway not working
     properly. This has been seen in Breast, Ovarian and Pancreas cancer
-    samples.</p></li></ul></details></div>
+    samples.</p>
+</li>
+</ul>
+</details>
+</div>
 </div>
 <p><br>
 Now we can plot out the results for the individual samples in our
 dataset to show what proportion of their mutations have been assigned to
 each of the signatures.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pdf<span class="p">(</span>file<span class="o">=</span><span class="s">&quot;PlotSampleContribution3Signatures.pdf&quot;</span><span class="p">,</span> width<span class="o">=</span><span class="m">9</span><span class="p">,</span> height<span class="o">=</span><span class="m">6</span><span class="p">)</span>
-plotSamples<span class="p">(</span>sigs_nmf<span class="p">,</span> normalize<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="o">+</span> scale_y_continuous<span class="p">(</span>breaks<span class="o">=</span><span class="kp">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0.2</span><span class="p">),</span> expand <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">))</span><span class="o">+</span> theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>size<span class="o">=</span><span class="m">6</span><span class="p">))</span>
-dev.off<span class="p">()</span>
-</pre></div>
-</td></tr></table>
-
+<div class="highlight"><pre><span></span><code><span class="nf">pdf</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&quot;PlotSampleContribution3Signatures.pdf&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="o">=</span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="m">6</span><span class="p">)</span>
+<span class="nf">plotSamples</span><span class="p">(</span><span class="n">sigs_nmf</span><span class="p">,</span><span class="w"> </span><span class="n">normalize</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0.2</span><span class="p">),</span><span class="w"> </span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">))</span><span class="o">+</span><span class="w"> </span><span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">6</span><span class="p">))</span>
+<span class="nf">dev.off</span><span class="p">()</span>
+</code></pre></div>
 <p>If you don’t have time to carry out the advanced questions you can exit
 R and return to the normal terminal command line.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">quit</span><span class="p">()</span>
-n
-</pre></div>
-</td></tr></table>
-
+<div class="highlight"><pre><span></span><code><span class="nf">quit</span><span class="p">()</span>
+<span class="n">n</span>
+</code></pre></div>
 <p><br>
-Open the resulting <code class="codehilite">PlotSampleContribution3Signatures.pdf</code>.  </p>
+Open the resulting <code>PlotSampleContribution3Signatures.pdf</code>.  </p>
 <p>This shows the results for the mutation grouping for each sample. The
 samples are listed on the x-axis and the proportion of all mutations for
 that sample is shown on the y-axis. The colours of the bars indicate
@@ -1046,16 +1133,29 @@ Ovarian Carcinomas and Cutaneous Melanoma.
 <p class="admonition-title">Question</p>
 <p>Using the major signature found for each sample can you guess which are
 ovarian and which are melanoma samples?</p>
-<div class="admonition success"><details><summary><strong>Answer</strong></summary><ul><li><p>Samples 9-12 have the majority signature of our signature 1. This is
-    the UV signature and so these are likely to be Melanoma samples.</p></li><li><p>Samples 4-8 have the majority signature of our signature 3. This is
-    the BRCA signature and these are most likely to be ovarian samples.</p></li><li><p>Samples 1-3 have the majority signature of our signature 2. This is
+<div class="admonition success">
+<details><summary><strong>Answer</strong></summary><ul>
+<li>
+<p>Samples 9-12 have the majority signature of our signature 1. This is
+    the UV signature and so these are likely to be Melanoma samples.</p>
+</li>
+<li>
+<p>Samples 4-8 have the majority signature of our signature 3. This is
+    the BRCA signature and these are most likely to be ovarian samples.</p>
+</li>
+<li>
+<p>Samples 1-3 have the majority signature of our signature 2. This is
     the APOBEC signature indicating activity of the anti-viral APOBEC
     enzymes. These are less likely to be from cutaneous melanoma because
     they have very few UV associated mutations although it could
     possibly be from a different subtype. However it is much more likely
     that these will be ovarian tumours as this APOBEC signature has been
     seen in breast tumours which can be similar to ovarian cancers in
-    terms of the mutated genes.</p></li></ul></details></div>
+    terms of the mutated genes.</p>
+</li>
+</ul>
+</details>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
@@ -1065,11 +1165,14 @@ ovarian and which are melanoma samples?</p>
 <div class="admonition note">
 <p class="admonition-title"><em>Advanced exercise</em></p>
 <p>Now rerun the process this time using 4 signatures as the solution.</p>
-<div class="admonition hint"><details><summary><strong>Hint</strong></summary><p>You don’t have to start back at the beginning but you can jump to
+<div class="admonition hint">
+<details><summary><strong>Hint</strong></summary><p>You don’t have to start back at the beginning but you can jump to
 the step where you run the NMF but this time for 4 instead of 3
 signatures. Then continue through making the plots. You will need to
 change the name of each plot you remake with 4 signatures because
-Cairo won’t let you overwrite and existing file.</p></details></div>
+Cairo won’t let you overwrite and existing file.</p>
+</details>
+</div>
 <p>Can you find a good match in the set of known signatures for all 4 patterns?</p>
 <p>Can you find a verified process for all of the profiles you are seeing?</p>
 </div>
@@ -1079,90 +1182,55 @@ Cairo won’t let you overwrite and existing file.</p></details></div>
 <a href="http://www.nature.com/nature/journal/v500/n7463/pdf/nature12477.pdf">http://www.nature.com/nature/journal/v500/n7463/pdf/nature12477.pdf</a></p>
 <p>Gehring <em>et al.</em> Bioinformatics 2015: <br />
 <a href="http://bioinformatics.oxfordjournals.org/content/early/2015/07/31/bioinformatics.btv408.full">http://bioinformatics.oxfordjournals.org/content/early/2015/07/31/bioinformatics.btv408.full</a></p>
+
+
+
+
+
                 
-                  
-                
-              
-              
-                
-              
-            </article>
-          </div>
+              </article>
+            </div>
+          
+          
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../../cancer-module-sv/sv_tut/" title="Structural Variant Analysis" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Structural Variant Analysis
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../02_intogen/" title="Cohort analysis for the identification of driver genes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Cohort analysis for the identification of driver genes
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            &copy; The authors; 2017-
-          </div>
-        
-        powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
-        and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
-          Material for MkDocs</a>
-      </div>
-      
-        
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; The authors; 2017-
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-      <script src="../../../assets/javascripts/application-07b0fbb49b.js"></script>
-      
-      
-      <script>app.initialize({url:{base:"../../.."}})</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
         <script src="../../../js/details.js"></script>
-      
-    
-    
       
     
   </body>

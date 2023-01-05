@@ -1,96 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
     <url>
-     <loc>/</loc>
-     <lastmod>2017-07-31</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-    
-
-    
     <url>
-     <loc>/trainers/trainers/</loc>
-     <lastmod>2017-07-31</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-    
-
-    
     <url>
-     <loc>/timetables/timetable_cancer/</loc>
-     <lastmod>2017-07-31</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-    
-
-    
     <url>
-     <loc>/preamble/</loc>
-     <lastmod>2017-07-31</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
     <url>
-     <loc>/modules/cancer-module-cli/commandline/</loc>
-     <lastmod>2017-07-31</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/modules/cancer-module-qc/ngs-qc/</loc>
-     <lastmod>2017-07-31</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/modules/cancer-module-alignment/alignment/</loc>
-     <lastmod>2017-07-31</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/modules/cancer-module-snv/snv/</loc>
-     <lastmod>2017-07-31</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/modules/cancer-module-cnv/cnv-tut/</loc>
-     <lastmod>2017-07-31</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/modules/cancer-module-sv/sv_tut/</loc>
-     <lastmod>2017-07-31</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc></loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/modules/cancer-module-viz/visu/</loc>
-     <lastmod>2017-07-31</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
     <url>
-     <loc>/license/</loc>
-     <lastmod>2017-07-31</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-    
-
+    <url>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>None</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
