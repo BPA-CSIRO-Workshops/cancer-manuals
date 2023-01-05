@@ -55,7 +55,7 @@ Melbourne Bioinformatics, Carlton, Melbourne  <br>
 
 <!--[image](images/generic.jpg) **Dr Anna Syme** Bioinformatician, Melbourne Bioinformatics, Melbourne  -->
 
-![image](images/Teber.png) <br>
+<!--![image](images/Teber.png) <br>-->
 **Dr. Erdahl Teber** <br>
 Senior Research Officer (Bioinformatics)<br>
 Children Medical Research Institute, Kids Cancer Alliance, University of Sydney, Sydney  <br>
