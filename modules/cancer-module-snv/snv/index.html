@@ -1105,7 +1105,9 @@ site to understand what is going on with your reads.</p>
 <p class="admonition-title">Question</p>
 <p>There are 3 unique flags, what do they mean? The flag is the second column.</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p><strong>129:</strong><br />
+<details>
+<summary><strong>Answer</strong></summary>
+<p><strong>129:</strong><br />
 read paired<br />
 second in pair  </p>
 <p><strong>113:</strong><br />
@@ -1129,12 +1131,16 @@ There are lots of possible different flags, let’s look at a few more</p>
 <p class="admonition-title">Question</p>
 <p>Let’s take the last read, which looks properly paired and find its mate pair.</p>
 <div class="admonition hint">
-<details><summary><strong>Hint</strong></summary><p>a)    Instead of using <code>head</code>, what unix command could we pipe the output to?<br />
+<details>
+<summary><strong>Hint</strong></summary>
+<p>a)    Instead of using <code>head</code>, what unix command could we pipe the output to?<br />
 b)    Once we’ve found both reads, the command can be stopped by typing <code>CTRL-C</code>  </p>
 </details>
 </div>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><div class="codehilite"><pre><span></span><code><span class="n">samtools</span><span class="w"> </span><span class="n">view</span><span class="w"> </span><span class="n">alignment</span><span class="o">/</span><span class="n">normal</span><span class="o">/</span><span class="n">normal</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">grep</span><span class="w"> </span><span class="n">HWI</span><span class="o">-</span><span class="n">ST478_0133</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2205</span><span class="p">:</span><span class="mi">14675</span><span class="p">:</span><span class="mi">32513</span>
+<details>
+<summary><strong>Answer</strong></summary>
+<div class="codehilite"><pre><span></span><code><span class="n">samtools</span><span class="w"> </span><span class="n">view</span><span class="w"> </span><span class="n">alignment</span><span class="o">/</span><span class="n">normal</span><span class="o">/</span><span class="n">normal</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">grep</span><span class="w"> </span><span class="n">HWI</span><span class="o">-</span><span class="n">ST478_0133</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2205</span><span class="p">:</span><span class="mi">14675</span><span class="p">:</span><span class="mi">32513</span>
 </code></pre></div>
 
 </details>
@@ -1144,7 +1150,9 @@ b)    Once we’ve found both reads, the command can be stopped by typing <code>
 <p class="admonition-title">Question</p>
 <p>Using the cigar string, what can we tell about the alignment of the mate pair?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>The mate pair has a less convincing alignment with two insertions and
+<details>
+<summary><strong>Answer</strong></summary>
+<p>The mate pair has a less convincing alignment with two insertions and
 soft clipping reported.</p>
 </details>
 </div>
@@ -1153,7 +1161,9 @@ soft clipping reported.</p>
 <p class="admonition-title">Question</p>
 <p>How might the alignment information from the original read be used by the aligner?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>Even though the alignment of the mate pair is questionable the presence
+<details>
+<summary><strong>Answer</strong></summary>
+<p>Even though the alignment of the mate pair is questionable the presence
   of it’s properly paired mate helps the aligner in deciding where to put
   the less-certain read.</p>
 </details>
@@ -1164,11 +1174,15 @@ soft clipping reported.</p>
 <p class="admonition-title">Question</p>
 <p>How many reads mapped and unmapped were there?</p>
 <div class="admonition hint">
-<details><summary><strong>Hint</strong></summary><p>Look at the samtools view help menu by typing <code>samtools view</code> without any arguments</p>
+<details>
+<summary><strong>Hint</strong></summary>
+<p>Look at the samtools view help menu by typing <code>samtools view</code> without any arguments</p>
 </details>
 </div>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p><div class="highlight"><pre><span></span><code>samtools view -c -f4 alignment/normal/normal.sorted.bam
+<details>
+<summary><strong>Answer</strong></summary>
+<p><div class="highlight"><pre><span></span><code>samtools view -c -f4 alignment/normal/normal.sorted.bam
 </code></pre></div>
 77229
 <div class="highlight"><pre><span></span><code>samtools view -c -F4 alignment/normal/normal.sorted.bam
@@ -1220,7 +1234,9 @@ mv<span class="w"> </span>tumour.sorted.realigned.ba*<span class="w"> </span>ali
 <p class="admonition-title">Question</p>
 <p>Why did we use both normal and tumor together?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>Because if a region needs realignment, maybe one of the samples in the
+<details>
+<summary><strong>Answer</strong></summary>
+<p>Because if a region needs realignment, maybe one of the samples in the
 pair has less reads or was excluded from the target creation.
 This makes sure the normal and tumor are all in-sync for the somatic
 calling step.</p>
@@ -1231,7 +1247,9 @@ calling step.</p>
 <p class="admonition-title">Question</p>
 <p>How many regions did it think needed cleaning?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><div class="codehilite"><pre><span></span><code>wc -l alignment/normal/realign.intervals
+<details>
+<summary><strong>Answer</strong></summary>
+<div class="codehilite"><pre><span></span><code>wc -l alignment/normal/realign.intervals
 </code></pre></div>
 
 <p>27300</p>
@@ -1254,7 +1272,9 @@ when there is a microsatellite or homopolymer. e.g.</p>
 <p class="admonition-title">Question</p>
 <p>Why is it important?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>This makes it easier for downstream analysis tools.</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>This makes it easier for downstream analysis tools.</p>
 <p>For NGS analysis, the convention is to left align indels.</p>
 <p>This is only really needed when calling variants with legacy locus-based
 tools such as samtools or GATK UnifiedGenotyper. Otherwise you will have
@@ -1292,7 +1312,9 @@ We use <code>Picard</code> to do this:</p>
 <p class="admonition-title">Question</p>
 <p>What are duplicate reads?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>Different read pairs representing the same initial DNA fragment.</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>Different read pairs representing the same initial DNA fragment.</p>
 </details>
 </div>
 </div>
@@ -1300,7 +1322,9 @@ We use <code>Picard</code> to do this:</p>
 <p class="admonition-title">Question</p>
 <p>What are they caused by?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><ul>
+<details>
+<summary><strong>Answer</strong></summary>
+<ul>
 <li>PCR reactions (PCR duplicates).  </li>
 <li>Some clusters that are thought of being separate in the flowcell but are
 the same (optical duplicates)</li>
@@ -1312,7 +1336,9 @@ the same (optical duplicates)</li>
 <p class="admonition-title">Question</p>
 <p>What are the ways to detect them?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><ol>
+<details>
+<summary><strong>Answer</strong></summary>
+<ol>
 <li>
 <p>Picard and samtools uses the alignment positions:  </p>
 <ul>
@@ -1366,7 +1392,9 @@ We can look in the metrics output to see what happened.</p>
 <p class="admonition-title">Question</p>
 <p>What percent of reads are duplicates?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>0.046996%</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>0.046996%</p>
 </details>
 </div>
 </div>
@@ -1375,7 +1403,9 @@ We can look in the metrics output to see what happened.</p>
 <p>Often, we have multiple libraries and when this occurs separate measures
 are calculated for each library. Why is it important to not combine everything?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><ul>
+<details>
+<summary><strong>Answer</strong></summary>
+<ul>
 <li>Each library represents a set of different DNA fragments.</li>
 <li>Each library involves different PCR reactions</li>
 </ul>
@@ -1390,7 +1420,9 @@ libraries when the coverage is high.</p>
 <p class="admonition-title">Question</p>
 <p>Why do we need to recalibrate base quality scores?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>The vendors tend to inflate the values of the bases in the reads. The
+<details>
+<summary><strong>Answer</strong></summary>
+<p>The vendors tend to inflate the values of the bases in the reads. The
 recalibration tries to lower the scores of some biased motifs for some
 technologies.</p>
 </details>
@@ -1468,7 +1500,9 @@ In this project, coverage is expected to be 25x. Look at the coverage:</p>
 <p class="admonition-title">Question</p>
 <p>Does the coverage fit with the expectation?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><ul>
+<details>
+<summary><strong>Answer</strong></summary>
+<ul>
 <li>
 <p>Yes the mean coverage of the region is 25x.</p>
 </li>
@@ -1511,7 +1545,9 @@ less -S alignment/tumour/tumour.sorted.dup.recal.metric.insertSize.tsv
 <p class="admonition-title">Question</p>
 <p>How do the two libraries compare?    </p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>The tumour sample has a larger median insert size than the
+<details>
+<summary><strong>Answer</strong></summary>
+<p>The tumour sample has a larger median insert size than the
 normal sample (405 vs. 329).</p>
 </details>
 </div>
@@ -1542,7 +1578,9 @@ less -S alignment/tumour/tumour.sorted.dup.recal.metric.alignment.tsv
 <p class="admonition-title">Question</p>
 <p>Do you think the sample and the reference genome fit together?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>Yes, 99% of the reads have been aligned.<br />
+<details>
+<summary><strong>Answer</strong></summary>
+<p>Yes, 99% of the reads have been aligned.<br />
 Usually, we consider:</p>
 <ul>
 <li>A good alignment if &gt; 85%</li>
@@ -1676,7 +1714,9 @@ Fields vary from caller to caller. Some values are are almost always there:</p>
 <p class="admonition-title">Question</p>
 <p>Looking at the three vcf files, how can we detect only somatic variants?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>Some commands to find somatic variant in the vcf file:</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>Some commands to find somatic variant in the vcf file:</p>
 <p>varscan:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">grep</span><span class="w"> </span><span class="n">SOMATIC</span><span class="w"> </span><span class="n">variant_calling</span><span class="o">/</span><span class="n">varscan</span><span class="o">.</span><span class="n">snp</span><span class="o">.</span><span class="n">vcf</span>
 </code></pre></div>

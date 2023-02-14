@@ -761,7 +761,7 @@ optical duplicates.</p>
 <p>We have used 4 Blood samples (8 paired-end (PE) <code>*.fastq.gz</code> files) and 5 Liver
 samples (10 PE <code>*.fastq.gz</code> files) data from this study to perform the
 whole genome alignment using the BWA aligner. The whole process took
->150K CPU seconds per sample and the precomputed alignment will be used
+&gt;150K CPU seconds per sample and the precomputed alignment will be used
 in different sections of this workshop.</p>
 <hr />
 <h2 id="prepare-the-environment">Prepare the Environment<a class="headerlink" href="#prepare-the-environment" title="Permanent link">&para;</a></h2>
@@ -880,7 +880,9 @@ head -n 10 SM_Blood_ID_ERR059356.subset.sam
 <p>Can you distinguish between the header of the SAM format and the actual
 alignments?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>The header line starts with the letter ‘@’ i.e.<br />
+<details>
+<summary><strong>Answer</strong></summary>
+<p>The header line starts with the letter ‘@’ i.e.<br />
 <div class="highlight"><pre><span></span><code>@SQ SN:GL000192.1   LN:547496
 @RG SM:Blood    ID:ERR059356    LB:lb   PL:ILLUMINA
 @PG ID:bwa  PN:bwa  VN:0.7.15-r1140 CL:bwa mem -M -t 4 -R @RG\tSM:Blood\tID:ERR059356.subset\tLB:lb\tPL:ILLUMINA bwaIndex/human_g1k_v37.fasta input/SM_Blood_ID_ERR059356.subset_R1.fastq.gz input/SM_Blood_ID_ERR059356.subset_R2.fastq.gz
@@ -896,7 +898,9 @@ HWI-ST478_0133:3:1101:1352:2070#0   163 14
 <p class="admonition-title">Question</p>
 <p>What kind of information does the header provide?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><ul>
+<details>
+<summary><strong>Answer</strong></summary>
+<ul>
 <li>
 <p>@HD: Header line; VN: Format version; SO: the sort order of
     alignments.</p>
@@ -917,7 +921,9 @@ HWI-ST478_0133:3:1101:1352:2070#0   163 14
 <p class="admonition-title">Question</p>
 <p>To which chromosome are the reads mapped?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>All chromosomes are represented (look at the 3<sup>rd</sup> field).<br />
+<details>
+<summary><strong>Answer</strong></summary>
+<p>All chromosomes are represented (look at the 3<sup>rd</sup> field).<br />
 grep -v &ldquo;^@&rdquo; SM_Blood_ID_ERR059356.subset.sam  | cut -f3 | sort | uniq</p>
 </details>
 </div>
@@ -976,7 +982,9 @@ file.<br />
 <p>How can you quickly find out whether a BAM file is already coordinate
 sorted or not?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>Use <code>samtools view -h</code> command to look at the SAM header.
+<details>
+<summary><strong>Answer</strong></summary>
+<p>Use <code>samtools view -h</code> command to look at the SAM header.
 It will have an SO field (e.g. SO:coordinate)</p>
 </details>
 </div>

@@ -724,7 +724,9 @@ less scones.somatic.tsv
 <p class="admonition-title">Question</p>
 <p>What can you see from this data?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><ul>
+<details>
+<summary><strong>Answer</strong></summary>
+<ul>
 <li>
 <p>the filtered output of 3 different software: Mutect (SNVs),
 Delly (SVs), SCoNEs (CNVs).</p>
@@ -745,7 +747,9 @@ deletion, inversion, translocation, large amplification and deletion
 <p class="admonition-title">Question</p>
 <p>Why don’t we use the vcf format for all types of calls?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>The 1000 Genomes project tries to use/include SV calls in the vcf format.
+<details>
+<summary><strong>Answer</strong></summary>
+<p>The 1000 Genomes project tries to use/include SV calls in the vcf format.
 Some tools like Delly use this format for SVs. It is a good idea to try to
 include everything together but this not the be the best way to handle SVs and
 CNVs.</p>
@@ -756,7 +760,9 @@ CNVs.</p>
 <p class="admonition-title">Question</p>
 <p>Why?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>Due to the nature of these calls, you can not easily integrate the
+<details>
+<summary><strong>Answer</strong></summary>
+<p>Due to the nature of these calls, you can not easily integrate the
 positional information of the two breakpoints (that could be located
 far away or in an other chromosome) using a single position format.</p>
 </details>

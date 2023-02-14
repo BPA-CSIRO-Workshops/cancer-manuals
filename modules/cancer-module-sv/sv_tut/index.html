@@ -906,61 +906,61 @@ record format is described in the table below:</p>
 <table>
 <thead>
 <tr>
-<th align="left">Column</th>
-<th align="left">Field</th>
-<th align="left">Description</th>
+<th style="text-align: left;">Column</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">1</td>
-<td align="left">CHROM</td>
-<td align="left">Chromosome name</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">CHROM</td>
+<td style="text-align: left;">Chromosome name</td>
 </tr>
 <tr>
-<td align="left">2</td>
-<td align="left">POS</td>
-<td align="left">1-based position. For an indel, this is the position preceding the indel</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">POS</td>
+<td style="text-align: left;">1-based position. For an indel, this is the position preceding the indel</td>
 </tr>
 <tr>
-<td align="left">3</td>
-<td align="left">ID</td>
-<td align="left">Variant identifier</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">ID</td>
+<td style="text-align: left;">Variant identifier</td>
 </tr>
 <tr>
-<td align="left">4</td>
-<td align="left">REF</td>
-<td align="left">Reference sequence at POS involved in the variant</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">REF</td>
+<td style="text-align: left;">Reference sequence at POS involved in the variant</td>
 </tr>
 <tr>
-<td align="left">5</td>
-<td align="left">ALT</td>
-<td align="left">Comma delimited list of alternative sequence(s)</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">ALT</td>
+<td style="text-align: left;">Comma delimited list of alternative sequence(s)</td>
 </tr>
 <tr>
-<td align="left">6</td>
-<td align="left">QUAL</td>
-<td align="left">Phred-scaled probability of all samples being homozygous reference</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">QUAL</td>
+<td style="text-align: left;">Phred-scaled probability of all samples being homozygous reference</td>
 </tr>
 <tr>
-<td align="left">7</td>
-<td align="left">FILTER</td>
-<td align="left">Semicolon delimited list of filters that the variant fails to pass</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">FILTER</td>
+<td style="text-align: left;">Semicolon delimited list of filters that the variant fails to pass</td>
 </tr>
 <tr>
-<td align="left">8</td>
-<td align="left">INFO</td>
-<td align="left">Semicolon delimited list of variant information</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">INFO</td>
+<td style="text-align: left;">Semicolon delimited list of variant information</td>
 </tr>
 <tr>
-<td align="left">9</td>
-<td align="left">FORMAT</td>
-<td align="left">Colon delimited list of the format of sample genotypes in subsequent fields</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">FORMAT</td>
+<td style="text-align: left;">Colon delimited list of the format of sample genotypes in subsequent fields</td>
 </tr>
 <tr>
-<td align="left">10+</td>
-<td align="left"></td>
-<td align="left">Individual genotype information defined by FORMAT</td>
+<td style="text-align: left;">10+</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Individual genotype information defined by FORMAT</td>
 </tr>
 </tbody>
 </table>
@@ -1090,12 +1090,16 @@ alignments by</code> then select <code>start location</code>.</p>
 <p class="admonition-title">Question</p>
 <p>How many abnormal <em>paired-end read pairs</em> (red coloured F/R oriented read pairs) can you see that spans the deletion region? Does this number coincide with the INFO:PE?</p>
 <div class="admonition hint">
-<details><summary>Hint</summary><div class="highlight"><pre><span></span><code>cat somatic.sv.vcf | grep &quot;&lt;DEL&gt;&quot; | cut -f1,2,8
+<details>
+<summary>Hint</summary>
+<div class="highlight"><pre><span></span><code>cat somatic.sv.vcf | grep &quot;&lt;DEL&gt;&quot; | cut -f1,2,8
 </code></pre></div>
 </details>
 </div>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>19, YES</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>19, YES</p>
 </details>
 </div>
 </div>
@@ -1105,7 +1109,9 @@ alignments by</code> then select <code>start location</code>.</p>
 How many abnormal split-reads (soft-clipped reads) did
 you observe? Clue INFO:SR.</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>11</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>11</p>
 </details>
 </div>
 </div>
@@ -1115,7 +1121,9 @@ you observe? Clue INFO:SR.</p>
 <code>Expanded</code>. Is the predicted deletion likely to have a deleterious
 impact on a gene? If so, what gene and exons are deleted?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>ATRX, exons 2 to 25.</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>ATRX, exons 2 to 25.</p>
 </details>
 </div>
 </div>
@@ -1124,7 +1132,9 @@ impact on a gene? If so, what gene and exons are deleted?</p>
 <p>Does this region appear to be completely removed from this cancer
 genome? How can you tell?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>Yes, there is no read coverage within this deletion region relative to
+<details>
+<summary><strong>Answer</strong></summary>
+<p>Yes, there is no read coverage within this deletion region relative to
 the control genome.</p>
 </details>
 </div>
@@ -1152,7 +1162,9 @@ the control genome.</p>
 mate reads are mapped to Chr15)? Is it pointing to the tail or head of
 Chr18?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>Forward, towards the tail, or 3’ (+ive)</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>Forward, towards the tail, or 3’ (+ive)</p>
 </details>
 </div>
 </div>
@@ -1169,7 +1181,9 @@ reads are mapped to Chr18)? Is it pointing to the tail or head of Chr15?
 If you wish to zoom in or out, first click inside of the chromosome ideogram
 panel, then ctrl- to zoom out and shift+ to zoom in.</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>Reverse, towards the head, or 5’ (+ive)</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>Reverse, towards the head, or 5’ (+ive)</p>
 </details>
 </div>
 </div>
@@ -1179,12 +1193,16 @@ panel, then ctrl- to zoom out and shift+ to zoom in.</p>
 connection types)? If you are uncertain then run a BLAT (<a href="https://genome.ucsc.edu/cgi-bin/hgBlat?command=start">https://genome.ucsc.edu/cgi-bin/hgBlat?command=start</a>)
 search using the INFO:CONSENSUS sequence.</p>
 <div class="admonition hint">
-<details><summary>Hint</summary><div class="highlight"><pre><span></span><code>cat somatic.sv.vcf | grep &quot;&lt;TRA&gt;&quot; | cut -f1,2,8
+<details>
+<summary>Hint</summary>
+<div class="highlight"><pre><span></span><code>cat somatic.sv.vcf | grep &quot;&lt;TRA&gt;&quot; | cut -f1,2,8
 </code></pre></div>
 </details>
 </div>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>RF, head to tail, or 5 to 3. Therefore, Chr18 left side is fused to
+<details>
+<summary><strong>Answer</strong></summary>
+<p>RF, head to tail, or 5 to 3. Therefore, Chr18 left side is fused to
 Chr15 right side.</p>
 </details>
 </div>
@@ -1193,7 +1211,9 @@ Chr15 right side.</p>
 <p class="admonition-title">Question</p>
 <p>Did DELLY predict a reciprocal translocation? How can you tell?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>No, as we would expect to observe a Chr18 right side fused to Chr15 left
+<details>
+<summary><strong>Answer</strong></summary>
+<p>No, as we would expect to observe a Chr18 right side fused to Chr15 left
 side, near the same breakpoints.</p>
 </details>
 </div>
@@ -1202,7 +1222,9 @@ side, near the same breakpoints.</p>
 <p class="admonition-title">Question</p>
 <p>What gene structures is this translocation predicted to impact?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>ADAMTSL3 on Chr15 and PARD6G on Chr18.</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>ADAMTSL3 on Chr15 and PARD6G on Chr18.</p>
 </details>
 </div>
 </div>
@@ -1211,7 +1233,9 @@ side, near the same breakpoints.</p>
 <p>What is one possible reason why there is no observable read coverage
 after Chr18 breakpoint?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>Chromosome loss.</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>Chromosome loss.</p>
 </details>
 </div>
 </div>
@@ -1241,7 +1265,9 @@ left junction and then right junction.</p>
 <p>Which is the order and orientation of these paired-end reads (FR, RF, FF
 or RR)?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>RF</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>RF</p>
 </details>
 </div>
 </div>
@@ -1250,12 +1276,16 @@ or RR)?</p>
 <p>What is the estimated read-depth ratio of the cancer_cell_line versus
 normal control (INFO:RDRATIO) over the duplicate region?</p>
 <div class="admonition hint">
-<details><summary>Hint</summary><div class="highlight"><pre><span></span><code>cat somatic.sv.vcf | grep &quot;&lt;DUP&gt;&quot; | cut -f1,2,8
+<details>
+<summary>Hint</summary>
+<div class="highlight"><pre><span></span><code>cat somatic.sv.vcf | grep &quot;&lt;DUP&gt;&quot; | cut -f1,2,8
 </code></pre></div>
 </details>
 </div>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>3.3 ( 3 x increased read depth)</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>3.3 ( 3 x increased read depth)</p>
 </details>
 </div>
 </div>
@@ -1287,7 +1317,9 @@ This will take you to the mate-reads near the second breakpoint.</p>
 <p class="admonition-title">Question</p>
 <p>Which direction are the paired-end reads spanning (left or right spanning)?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>Right</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>Right</p>
 </details>
 </div>
 </div>
@@ -1295,7 +1327,9 @@ This will take you to the mate-reads near the second breakpoint.</p>
 <p class="admonition-title">Question</p>
 <p>What is the estimated size of the inverted interval?</p>
 <div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>55,408,660 – 54,834,492 = 574,168 bp</p>
+<details>
+<summary><strong>Answer</strong></summary>
+<p>55,408,660 – 54,834,492 = 574,168 bp</p>
 </details>
 </div>
 </div>
